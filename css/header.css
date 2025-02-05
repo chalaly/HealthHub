@@ -1,0 +1,84 @@
+/* 헤더 색상 */
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    padding: 0 5%;
+
+    box-sizing: border-box;
+
+}
+
+header .header_logo {
+    display: flex;
+    /* 내부 요소 정렬 */
+
+    align-items: center;
+    /* 로고 세로 중앙 정렬 */
+    height: 100%;
+
+    flex: 1;
+
+}
+
+header .header_logo img {
+    display: block;
+    height: auto;
+    width: 60%;
+    object-fit: contain;
+    /*이미지 왜곡 방지*/
+}
+
+
+
+/* 드롭다운 컨테이너 */
+.dropdown_container {
+    position: relative;
+    display: inline-block;
+}
+
+/* 카테고리 아이콘 */
+.icon_category {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    object-fit: contain;
+    position: relative;
+    z-index: 10;
+}
+
+/* 드롭다운 박스 */
+.dropdown_box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-100%) translateY(-50%);
+    padding: 10px 15px;
+    z-index: 100;
+    text-align: center;
+    gap: 50px;
+}
+
+/* 드롭다운 링크 */
+.dropdown_link {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    padding-right: 100PX;
+}
+
+.dropdown_link:hover {
+    color: orange;
+}
+
+
+/* 호버 시 드롭다운 표시 */
+.dropdown_container:hover .dropdown_box {
+    display: flex;
+}

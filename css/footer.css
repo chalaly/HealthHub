@@ -1,0 +1,60 @@
+footer {
+    background-color: black;
+    color: white;
+    height: 10vh;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* 푸터를 컨텐츠 아래 위치하도록 설정 (스크롤이 있을 때) */
+body.has-scroll footer {
+    position: relative;
+    /* 스크롤이 생기면 푸터를 콘텐츠 아래로 이동 */
+}
+
+
+/* 푸터를 컨텐츠 맨 아래로 이동하도록 설정 */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /*  전체 화면 높이를 최소 기준으로 설정 */
+}
+
+.content {
+    flex: 1;
+    /*  메인 컨텐츠가 푸터 위에서 남은 공간을 채우도록 설정 */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* 좌우 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    max-width: 1200px;
+    /* 최대 너비 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+    font-size: 14px;
+    /* 텍스트 크기 */
+    line-height: 1;
+    /* 줄 간격 */
+}
+
+.footer_logo {
+    height: 50px;
+    margin-right: 15px;
+}
