@@ -5,7 +5,7 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 
 // 리뷰 관련 요소 가져오기
-const pageId = document.querySelector("main").id; // id로 가져오면 js전체 바꿔야함함
+const pageId = document.querySelector("main").id; // id로 가져오면 js전체 바꿔야함
 console.log(pageId);
 const reviewsList = document.getElementById('reviews-list');
 const averageRatingValue = document.getElementById('average-rating-value');

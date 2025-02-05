@@ -1,8 +1,13 @@
 {
   "clientData": [
-    
+    {
+      "id": "8bda",
+      "clientName": "admin",
+      "clientId": "admin",
+      "clientNick": "admin",
+      "clientPwd": "admin",
+      "banned": false
+    }
   ],
-  "reviews": [
-    
-  ]
+  "reviews": []
 }
