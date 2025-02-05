@@ -1,25 +1,14 @@
-@font-face {
-    font-family: 'noto';
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap');
 
 body {
-    /* word-break: keep-all;
-    white-space: normal;
-    overflow-wrap: break-word; */
-    font-family: 'noto';
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     background-color: rgba(0, 0, 0, 0.212);
 }
 
-
-
 main {
-    /* word-break: keep-all;
-    white-space: normal;
-    overflow-wrap: break-word; */
     padding: 20px;
 }
 
@@ -31,10 +20,11 @@ main {
 }
 
 .machine-image {
+    margin-top: 10%;
+    margin-left: 20%;
     border-radius: 10px;
-    height: 45vw;
-    width: 45vw;
-    z-index: 2;
+    height: 25vw;
+    width: 30vw;
 }
 
 @media screen and (min-width:800px) {
@@ -43,11 +33,15 @@ main {
     }
 }
 
-.spec {
+.spec li {
+    padding-left: 5%;
+    text-indent: -20px;
+    margin: 1%;
     background-color: rgb(10, 10, 10);
     border-radius: 10px;
     color: white;
 }
+
 
 .spec h2 {
     margin-left: 20px;
@@ -63,11 +57,20 @@ main {
     word-break: keep-all;
     white-space: normal;
     overflow-wrap: break-word;
-    font-size: 20px;
+    font-size: 1.5vw;
     line-height: 4vw;
 }
 
-.spec ul li img {
+.spec ul li:nth-of-type(1) {
+    font-size: 3vw;
+}
+
+.spec ul li:nth-of-type(2) {
+    font-size: 1.5vw;
+    color: #ff9000;
+}
+
+.spec ul li img{
     height: 150px;
     width: 150px;
 }
@@ -81,8 +84,8 @@ main {
     height: 280%;
     width: 230%;
     border: 1px solid #ccc;
-    background-color: white;
     padding: 5px;
+    z-index: 2;
 }
 
 .button-container {
@@ -171,40 +174,39 @@ textarea {
     resize: none;
 }
 
+footer {
+    margin-bottom: 0;
+    background-color: black;
+    color: white;
+    height: 13vh;
+    width: 100%;
+}
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* 좌우 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+    max-width: 1200px;
+    /* 최대 너비 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+}
 
-/* js innerhtml 스타일일 */
-.review-item {
+.logo-text {
     display: flex;
     align-items: center;
-    background-color: white;
-    border: 1px solid;
-    padding: 10px;
-    margin: 8px 0;
-
 }
 
-/* 리뷰 내용 스타일 */
-.review-content {
-    font-size: 16px;
+.text {
+    font-size: 14px;
+    /* 텍스트 크기 */
+    line-height: 1.5;
+    /* 줄 간격 */
 }
 
-.review-text {
-    word-break: break-all;
-}
-
-/* 삭제 버튼 스타일 (X 아이콘) */
-.delete-button {
-    background: none;
-    border: none;
-    color: red;
-    /* 빨간색 */
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-
-.delete-button:hover {
-    color: darkred;
-    /* 마우스 올리면 더 진한 빨간색 */
+.footer_logo {
+    height: 50px;
+    margin-right: 15px;
 }
