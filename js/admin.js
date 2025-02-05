@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const response = await axios.get("http://localhost:3000/clientData");
             users = response.data;
+            users = response.data.filter(user => user.clientName !== admin);
             renderUsers(); // 가져온 데이터를 화면에 반영
         } catch (error) {
             console.error("사용자 데이터를 가져오는 중 오류 발생:", error);
