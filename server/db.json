@@ -7,6 +7,14 @@
       "clientNick": "admin",
       "clientPwd": "admin",
       "banned": false
+    },
+    {
+      "id": "1378",
+      "clientName": "a",
+      "clientId": "a@naver.com",
+      "clientNick": "a",
+      "clientPwd": "a",
+      "banned": false
     }
   ],
   "reviews": []

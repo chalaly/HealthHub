@@ -182,31 +182,38 @@ footer {
     width: 100%;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    /* 좌우 정렬 */
-    align-items: center;
-    /* 세로 중앙 정렬 */
-    max-width: 1200px;
-    /* 최대 너비 */
-    margin: 0 auto;
-    /* 중앙 정렬 */
-}
-
-.logo-text {
+/* js innerhtml 스타일일 */
+.review-item {
     display: flex;
     align-items: center;
+    background-color: white;
+    border: 1px solid;
+    padding: 10px;
+    margin: 8px 0;
+
 }
 
-.text {
-    font-size: 14px;
-    /* 텍스트 크기 */
-    line-height: 1.5;
-    /* 줄 간격 */
+/* 리뷰 내용 스타일 */
+.review-content {
+    font-size: 16px;
 }
 
-.footer_logo {
-    height: 50px;
-    margin-right: 15px;
+.review-text {
+    word-break: break-all;
+}
+
+/* 삭제 버튼 스타일 (X 아이콘) */
+.delete-button {
+    background: none;
+    border: none;
+    color: red;
+    /* 빨간색 */
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    color: darkred;
+    /* 마우스 올리면 더 진한 빨간색 */
 }
