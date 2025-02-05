@@ -6,7 +6,6 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 // 리뷰 관련 요소 가져오기
 const pageId = document.querySelector("main").id; // id로 가져오면 js전체 바꿔야함
-console.log(pageId);
 const reviewsList = document.getElementById('reviews-list');
 const averageRatingValue = document.getElementById('average-rating-value');
 const reviewForm = document.getElementById('review-form');
@@ -54,6 +53,23 @@ window.hideImage = function () {
     document.getElementById('hoverImage').style.display = 'none';
 };
 
+
+// HTML에서 기존 리뷰 가져오기
+function loadExistingReviews() {
+    const reviewElements = document.querySelectorAll("#reviews-list .review");
+    const existingReviews = [];
+
+    reviewElements.forEach((reviewEl) => {
+        existingReviews.push({
+            content: reviewEl.innerHTML,
+            isStatic: true,
+        })
+
+    });
+
+    return existingReviews;
+}
+
 // ** 서버에서 기존 리뷰 불러오기 (초기화 시)**
 async function loadReviews() {
     try {
@@ -71,10 +87,14 @@ async function loadReviews() {
             console.log(`${pageId} 페이지에 대한 리뷰 데이터:`, filteredReviews);
         }
 
+        const staticReviews = loadExistingReviews();
 
 
         // ** 기존 리뷰 목록을 클리어하여 중복 방지 **
         reviewsList.innerHTML = '';
+
+        //html 리뷰 먼저 추가
+        staticReviews.forEach(addReviewToList);
 
         filteredReviews.forEach(review => {
 
@@ -94,20 +114,32 @@ async function loadReviews() {
 
 //리뷰 목록에 추가하는 함수 (로그인 여부와 무관하게 리뷰를 표시)
 function addReviewToList(review) {
-    console.log(` 리뷰 추가됨: ${review.nickname} - ${review.review} (평점: ${review.rating})`);
+
     //  리뷰 컨테이너 (`div.review-item`)
     const reviewElement = document.createElement('div');
     reviewElement.classList.add('review-item');
 
-    // 리뷰 내용 (`div.review-content`)
-    const reviewContent = document.createElement('p');
-    reviewContent.classList.add('review-content');
-    reviewElement.innerHTML = `<strong>${review.nickname}:</strong> &nbsp <span class = "review-text"> ${review.review}<span> (평점: ${review.rating}점)`;
 
-    reviewElement.appendChild(reviewContent);
+    if (review.isStatic) {
+        reviewElement.innerHTML = review.content;
+    }
+    else {
+
+        // 리뷰 내용 (`div.review-content`)
+        const reviewContent = document.createElement('p');
+        console.log(reviewContent);
+        reviewContent.classList.add('review-content');
+        reviewElement.innerHTML = `<strong>${review.nickname}:</strong> &nbsp <span class = "review-text"> ${review.review}<span> (평점: ${review.rating}점)`;
+
+        reviewElement.appendChild(reviewContent);
+    }
+
+
+
 
     //  로그인한 사용자가 해당 리뷰의 작성자(clientId)와 일치할 경우 삭제 버튼 추가
-    if (loggedInUser && review.clientId === loggedInUser.clientId) {
+    //  html에 작성된 리뷰는 삭제 버튼을 추가하지 않음
+    if (!review.isStatic && loggedInUser && review.clientId === loggedInUser.clientId) {
         const deleteButton = document.createElement('button');
         deleteButton.innerHTML = "&#10006;"; //x 아이콘 html 엔티티티
         deleteButton.classList.add("delete-button");

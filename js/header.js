@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.removeItem("loggedInUser");
                 alert("로그아웃되었습니다.");
                 location.reload(); // 새로고침하여 변경 적용
+                location.href = '../index.html';
             });
         } else {
             dropdownBox.innerHTML = `

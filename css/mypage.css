@@ -68,19 +68,32 @@
   }
 
 
-    #edit-profile-btn,
-    #edit-nick-btn {
-      background-color: orange;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      margin-top: 10px;
-      border-radius: 5px;
-    }
+  #edit-profile-btn,
+  #edit-nick-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
 
-    #edit-profile-btn:hover,
-    #edit-nick-btn:hover
-      {
-          background-color: gray;
-    }
+  #edit-profile-btn:hover,
+  #edit-nick-btn:hover {
+    background-color: gray;
+  }
+
+  .review-link {
+    text-decoration: none;
+    /* 밑줄 제거 */
+    color: black;
+    /* 기본 색상 */
+    transition: color 0.3s ease;
+    /* 색상 변경을 부드럽게 적용 */
+  }
+
+  .review-link:hover {
+    color: orange;
+    /* 마우스를 올렸을 때 색상 변경 */
+  }
