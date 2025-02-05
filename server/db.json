@@ -7,7 +7,32 @@
       "clientNick": "admin",
       "clientPwd": "admin",
       "banned": false
+    },
+    {
+      "id": "cb96",
+      "clientName": "asd",
+      "clientId": "asd@gmail.com",
+      "clientNick": "asd",
+      "clientPwd": "asd",
+      "banned": false
     }
   ],
-  "reviews": []
+  "reviews": [
+    {
+      "id": "554c",
+      "pageId": "bottom_sub1",
+      "nickname": "asd",
+      "clientId": "asd@gmail.com",
+      "review": "asd",
+      "rating": 2
+    },
+    {
+      "id": "b8a6",
+      "pageId": "bottom_sub2",
+      "nickname": "asd",
+      "clientId": "asd@gmail.com",
+      "review": "asd",
+      "rating": 3
+    }
+  ]
 }
