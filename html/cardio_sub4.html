@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기구 상세페이지</title>
+
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script defer src="../js/header.js"></script>
+    <script defer src="../js/footer.js"></script>
+    <script defer src="../js/sub.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header_logo"><!--로고 클래스-->
+            <a href="index.html">
+                <img src="../img/logo.png"> <!--로고 이미지-->
+            </a>
+        </div>
+    
+        <div class="dropdown_container">
+            <img src="../img/icon.png" class="icon_category">
+            <div class="dropdown_box">
+                <a href="./html/mypage.html" class="dropdown_link">마이페이지</a>
+                <a href="./html/login.html" class="dropdown_link">로그인</a>
+    
+            </div>
+        </div>
+    </header>
+    <main id="cardio_sub4">
+        <!--장비 이미지, 가벼운 설명, 평균 가격대, 사용법-->
+        <section class="machine-details">
+            <img src="../img/vortecbike.png" alt="스핀바이크" class="machine-image">
+            <div class="spec">
+                <ul>
+                    <li><strong>스핀바이크</strong></li>
+                    <li>"여러 자세로 전신을 활용할 수 있는 사이클입니다."</li>
+                    
+                    <li><strong>스핀바이크 평균가 :</strong> 1,000,000₩</li>
+
+                    <li><strong>장점 :</strong>                   
+                        사이클 중 가장 칼로리 소모가 높습니다.
+                    </li>
+                    <li><strong>사용법 :</strong>
+                        안장 높이를 조절합니다.
+                        페달에서 발이 빠지지 않도록 발을 고정합니다.
+                        본인에게 맞는 강도를 맞춘 후 자전거를 타듯 페달을 밟습니다.
+                    </li>
+                    <li><strong>팁 :</strong> 
+                       일어선 자세, 허리를 편 자세 또는 숙인 자세로 번갈아가며 탑니다.
+                        </li>
+                        <li>
+                            <a href="https://smartstore.naver.com/cbsports/products/2400128965">
+                                머신추천사이트
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="button-container">
+            <button class="hover-button" onmouseover="showImage()" onmouseout="hideImage()">동작부위</button>
+            <img id="hoverImage" class="hover-image" src="../img/vortecbike_sub.png" alt="미리보기 이미지">
+        </div>
+
+        <!-- 사용자 한줄평 섹션 -->
+        <section class="reviews-section">
+            <h2>사용자 한줄평</h2>
+
+            <!-- 평균 평점 표시 -->
+            <div id="average-rating">
+                <strong>평균 평점:</strong> <span id="average-rating-value">0.0</span> / 5.0
+            </div>
+
+            <div id="reviews-list">
+                <div class="review">
+                    <p><strong>닉네임1:</strong> 일주 차 까지는 다리가 후들거리실겁니다. (평점: 4점)</p>
+                </div>
+                <div class="review">
+                    <p><strong>닉네임2:</strong> 신나는 음악과 함께라면 즐거움이 두배 (평점: 5점)</p>
+                </div>
+            </div>
+
+            <!-- 한줄평 작성 폼 -->
+            <h3>한줄평 작성하기</h3>
+            <form id="review-form">
+                <label for="review-text">한줄평:</label>
+                <textarea id="review-text" name="review" required placeholder="한줄평을 작성해주세요"></textarea>
+
+                <label for="rating">평점:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">선택하세요</option>
+                    <option value="1">1점</option>
+                    <option value="2">2점</option>
+                    <option value="3">3점</option>
+                    <option value="4">4점</option>
+                    <option value="5">5점</option>
+                </select>
+
+                <button type="submit">리뷰 제출</button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <footer id="footer-container">
+            <div class="footer-content">
+                <!-- 로고와 텍스트 -->
+                <div class="logo-text">
+                    <img src="../img/logo.png" alt="밑밑 로고" class="footer_logo">
+                    <div class="text">
+                        <p>인천 광역시 테크노파크22길 7-22 (리리)</p>
+                        <p>대표전화: 032-111-1111 | 팩스번호: 022-222-2222</p>
+                        <p>© 2025 Health Hub. All rights reserved.</p>
+    
+                    </div>
+                </div>
+        </footer>
+
+</body>
+
+</html>
