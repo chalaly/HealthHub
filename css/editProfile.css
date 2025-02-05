@@ -1,0 +1,110 @@
+/* 기본 스타일 초기화 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* 컨테이너 스타일 */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 입력 그룹: 이름, 이메일, 비밀번호 포함 */
+.input-group {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    /* ✅ 라벨 150px + 입력 필드 나머지 */
+    align-items: center;
+    /* ✅ 수직 정렬 */
+    gap: 15px;
+    /* ✅ 라벨과 입력 필드 간격 */
+    width: 100%;
+    margin-bottom: 20px;
+    /* ✅ 모든 입력 필드 간 동일한 간격 적용 */
+}
+
+/* 라벨 스타일 */
+.input-group label {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* 이름 & 이메일 (p 태그)와 비밀번호 (input 태그) 동일한 크기로 정렬 */
+.input-group p,
+.input-group input {
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    /* ✅ 전체 너비 조정 */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 45px;
+    /* ✅ 모든 필드 높이 동일하게 설정 */
+    display: flex;
+    align-items: center;
+    /* ✅ 수직 중앙 정렬 */
+    margin: 0;
+    /* ✅ 기본 마진 제거 */
+}
+
+/* 추가: `p` 태그가 높이를 제대로 인식하도록 설정 */
+.input-group p {
+    display: flex;
+    justify-content: left;
+    /* ✅ 텍스트를 왼쪽 정렬 */
+    align-items: center;
+    /* ✅ 수직 중앙 정렬 */
+    height: 45px !important;
+    /* ✅ 높이 강제 적용 */
+    line-height: normal;
+    /* ✅ 텍스트 수직 중앙 정렬 */
+    padding-left: 10px;
+    /* ✅ 입력 필드와 비슷한 패딩 적용 */
+}
+/* 버튼 컨테이너 */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* 저장 버튼 */
+#save-password {
+    background-color: orange;
+    color: white;
+}
+
+#save-password:hover {
+    background-color: #ff8c00;
+    /* ✅ 좀 더 진한 오렌지 */
+}
+
+/* 취소 버튼 */
+#cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+#cancel:hover {
+    background-color: #5a6268;
+}

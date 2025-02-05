@@ -1,0 +1,82 @@
+/* 기본 설정 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* 스크롤바 제거 */
+    height: 100%;
+    /* 콘텐츠가 뷰포트 높이에 꽉 차도록 설정 */
+}
+
+/* 컨테이너 */
+.signup_container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: gray;
+}
+
+/* 회원가입 박스 */
+.signup_box {
+    max-width: 280px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 헤더 */
+.header {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #706b6b;
+}
+
+/* 폼 */
+#signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 입력 필드 */
+#nameInput,
+#emailInput,
+#nicknameInput,
+#passwordInput,
+#confirmPasswordInput {
+    height: 40px;
+    outline: none;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+/* 회원가입 버튼 */
+#signupButton {
+    background-color: orange;
+    color: #ffffff;
+    font-size: 17px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* 버튼 호버 효과 */
+#signupButton:hover {
+    background-color: darkorange;
+}

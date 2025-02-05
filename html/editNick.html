@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/editNick.css">
+    <script defer src="../js/header.js"></script>
+    <script defer src="../js/footer.js"></script>
+    <script defer src="../js/editNick.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header_logo"><!--로고 클래스-->
+            <a href="../index.html">
+                <img src="../img/logo.png"> <!--로고 이미지-->
+            </a>
+        </div>
+    
+        <div class="dropdown_container">
+            <img src="../img/icon.png" class="icon_category">
+            <div class="dropdown_box">
+                <a href="../html/mypage.html" class="dropdown_link">마이페이지</a>
+                <a href="../html/login.html" class="dropdown_link">로그인</a>
+    
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>닉네임 변경</h2>
+        <form id="edit-password-form">
+            <div class="input-group">
+                <label for="user-email">이메일(ID):</label>
+                <p id="user-email"></p>
+            </div>
+            <div class="input-group">
+                <label for="user-name">이름:</label>
+                <p id="user-name"></p>
+            </div>
+            <div class="input-group">
+                <label for="user-name">닉네임:</label>
+                <p id="nick-name"></p>
+            </div>
+
+            <div class="input-group">
+                <label for="new-nick">새로운 닉네임:</label>
+                <input type="text" id="new-nick" placeholder="새 닉네임 입력" required>
+            </div>
+    
+            <div class="input-group">
+                <label for="confirm-password">비밀번호 확인:</label>
+                <input type="password" id="confirm-password" placeholder="새 비밀번호 재입력" required>
+            </div>
+                
+            <div class="button-container">
+                    <button type="submit" id="edit-nick">닉네임 변경</button>
+                    <button type="button" id="cancel">취소</button>
+            </div>
+    
+        </form>
+    </div>
+
+
+
+    <footer id="footer-container">
+        <div class="footer-content">
+            <!-- 로고와 텍스트 -->
+            <div class="logo-text">
+                <a href="#">
+                    <img src="../img/logo.png" alt="밑밑 로고" class="footer_logo">
+                </a>
+                <div class="text">
+                    <p>인천 광역시 테크노파크22길 7-22 (리리)</p>
+                    <p>대표전화: 032-111-1111 | 팩스번호: 022-222-2222</p>
+                    <p>© 2025 Health Hub. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    
+    </footer>
+    
+</body>
+</html>

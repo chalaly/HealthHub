@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="../css/signup.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="../js/signup.js"></script>
+</head>
+
+<body>
+    <div class="signup_container">
+        <div class="signup_box">
+            <div class="header">
+                <span>Welcome!</span>
+                <p>Sign up now to become a member.</p>
+            </div>
+            <form id="signupForm">
+                <input id="emailInput" type="text" placeholder="Enter Email" required name="clientId" />
+                <input id="nameInput" type="text" placeholder="Enter Name" required name="clientName" />
+                <input id="nicknameInput" type="text" placeholder="Enter NickName" required name="clientNick" />
+                <input id="passwordInput" type="password" placeholder="Choose A Password" required name="clientPwd" />
+                <input id="confirmPasswordInput" type="password" placeholder="Re-Enter Password" required />
+
+                <button id="signupButton" type="submit">Signup</button>
+                <span> Already a member? <a href="./login.html">Login Here</a></span>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
