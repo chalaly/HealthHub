@@ -42,33 +42,33 @@ html {
     font-size: 16px;
     padding: 10px;
     width: 100%;
-    /* ✅ 전체 너비 조정 */
+    /*  전체 너비 조정 */
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     height: 45px;
-    /* ✅ 모든 필드 높이 동일하게 설정 */
+    /*  모든 필드 높이 동일하게 설정 */
     display: flex;
     align-items: center;
-    /* ✅ 수직 중앙 정렬 */
+    /*  수직 중앙 정렬 */
     margin: 0;
-    /* ✅ 기본 마진 제거 */
+    /*  기본 마진 제거 */
 }
 
 /* 추가: `p` 태그가 높이를 제대로 인식하도록 설정 */
 .input-group p {
     display: flex;
     justify-content: left;
-    /* ✅ 텍스트를 왼쪽 정렬 */
+    /*  텍스트를 왼쪽 정렬 */
     align-items: center;
-    /* ✅ 수직 중앙 정렬 */
+    /*  수직 중앙 정렬 */
     height: 45px !important;
-    /* ✅ 높이 강제 적용 */
+    /*  높이 강제 적용 */
     line-height: normal;
-    /* ✅ 텍스트 수직 중앙 정렬 */
+    /* 텍스트 수직 중앙 정렬 */
     padding-left: 10px;
-    /* ✅ 입력 필드와 비슷한 패딩 적용 */
+    /*  입력 필드와 비슷한 패딩 적용 */
 }
 
 /* 버튼 컨테이너 */

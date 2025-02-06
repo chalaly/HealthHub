@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap');
+
+
+body,
+html{
+    font-family: "Noto Sans KR";
+}
+/* Google Fonts 사용 시 → @import 방식이 가장 간단하고 효과적. 
+서버에 직접 폰트 파일이 있다면 → @font-face로 지정. */

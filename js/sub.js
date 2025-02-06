@@ -133,7 +133,7 @@ function addReviewToList(review) {
         const reviewContent = document.createElement('p');
         console.log(reviewContent);
         reviewContent.classList.add('review-content');
-        reviewElement.innerHTML = `<strong>${review.nickname}:</strong> &nbsp <span class = "review-text"> ${review.review}<span> (평점: ${review.rating}점)`;
+        reviewElement.innerHTML = `<p><strong>${review.nickname}:</strong> &nbsp <span class = "review-text"> ${review.review}<span> (평점: ${review.rating}점)</p>`;
 
         reviewElement.appendChild(reviewContent);
     }

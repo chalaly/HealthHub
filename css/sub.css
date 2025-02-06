@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap');
-
 body {
-    font-family: "Noto Sans KR";
     font-weight: 400;
     font-style: normal;
     margin: 0;
@@ -70,7 +67,7 @@ main {
     color: #ff9000;
 }
 
-.spec ul li img{
+.spec ul li img {
     height: 150px;
     width: 150px;
 }
@@ -174,28 +171,34 @@ textarea {
     resize: none;
 }
 
-footer {
-    margin-bottom: 0;
-    background-color: black;
-    color: white;
-    height: 13vh;
-    width: 100%;
+hr {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 5px;
+    /* background-color: black; */
 }
+
 
 /* js innerhtml 스타일일 */
 .review-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /*내용과 삭제 버튼 정렬*/
     background-color: white;
     border: 1px solid;
-    padding: 10px;
-    margin: 8px 0;
+    padding: 15px;
+    margin: 8px;
+
 
 }
 
 /* 리뷰 내용 스타일 */
 .review-content {
     font-size: 16px;
+    flex: 1;
+
+
 }
 
 .review-text {
