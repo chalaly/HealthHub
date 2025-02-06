@@ -9,19 +9,11 @@
       "banned": false
     },
     {
-<<<<<<< HEAD
       "id": "1378",
       "clientName": "a",
       "clientId": "a@naver.com",
       "clientNick": "a",
       "clientPwd": "a",
-=======
-      "id": "cb96",
-      "clientName": "asd",
-      "clientId": "asd@gmail.com",
-      "clientNick": "asd",
-      "clientPwd": "asd",
->>>>>>> kkm
       "banned": false
     }
   ],
