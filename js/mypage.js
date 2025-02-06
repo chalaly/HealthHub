@@ -58,8 +58,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                     const reviewLink = document.createElement("a");
                     reviewLink.href = `./${review.pageId}.html`;
                     reviewLink.textContent = `(${machineName}) - " ${review.review}" (평점: ${review.rating}점)`;
-                    reviewLink.style.textDecoration = "none";
-                    reviewLink.style.color = "black";
+                    reviewLink.classList.add("review-link"); // css 스타일 적용 class 추가
 
                     reviewItem.appendChild(reviewLink);
                     activityListEl.appendChild(reviewItem);

@@ -1,7 +1,11 @@
 'use strict';
 
-// 로그인 사용자 정보 불러오기
-const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+// 로그인 사용자 정보 불러오기 (중복 선언 방지)
+if (!window.loggedInUser) {
+    // 전역객체 저장
+    window.loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+}
+let loggedInUser = window.loggedInUser;
 
 
 // 리뷰 관련 요소 가져오기
