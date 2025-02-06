@@ -10,95 +10,78 @@ html {
 }
 
 /* 컨테이너 */
-.container {
+.signup_container {
     display: grid;
     place-items: center;
     height: 100vh;
     background-color: gray;
 }
 
-/* 로그인 폼 */
-#loginForm {
-    background-color: #fff;
+/* 회원가입 박스 */
+.signup_box {
+    max-width: 400px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 5px;
     display: block;
     padding: 1rem;
-    max-width: 350px;
-    width: 100%;
-    margin: 0 auto;
     border-radius: 0.5rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* 폼 타이틀 */
-.form-title {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
+/* 헤더 */
+.header {
     text-align: center;
-    color: #000;
+    font-size: 22px;
+    font-weight: 700;
 }
 
-/* 입력 필드 컨테이너 */
-.input-container {
-    position: relative;
-    width: 100%;
-    margin: 8px 0;
-    /* input 여백 정렬 */
+.header p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #706b6b;
 }
 
-/* 이메일과 비밀번호 입력 필드 */
+/* 폼 */
+#signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 입력 필드 */
+#nameInput,
 #emailInput,
-#passwordInput {
-    background-color: #fff;
-    padding: 1rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    width: 100%;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;
+#nicknameInput,
+#passwordInput,
+#confirmPasswordInput {
+    height: 40px;
     outline: none;
-    margin: 8px 0;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 8px;
 }
 
-/* 입력 필드 내부 아이콘 (추가 가능) */
-.input-container span {
-    display: grid;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    place-content: center;
+span {
+    text-align: center;
 }
 
-/* 로그인 버튼 */
-#submitButton {
-    display: block;
-    padding: 0.75rem 1.25rem;
+/* 회원가입 버튼 */
+#signupButton {
     background-color: orange;
     color: #ffffff;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 500;
-    width: 100%;
-    border-radius: 0.5rem;
-    text-transform: uppercase;
+    font-size: 17px;
+    height: 40px;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
 }
 
-/* 회원가입 링크 */
-.signup-link {
-    color: #6B7280;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    text-align: center;
-}
-
-.signup-link a {
-    text-decoration: underline;
+/* 버튼 호버 효과 */
+#signupButton:hover {
+    background-color: darkorange;
 }

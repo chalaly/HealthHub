@@ -22,11 +22,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         //  서버에서 사용자 데이터 및 리뷰 데이터 가져오기
         const response = await axios.get("http://localhost:3000/clientData");
         const reviewsResponse = await axios.get("http://localhost:3000/reviews");
+        const machinesResponse = await axios.get("http://localhost:3000/machines");
 
         const users = response.data;
         const reviews = reviewsResponse.data;
+        const machines = machinesResponse.data;
 
         console.log(reviews);
+        console.log(machines);
 
         //  로그인한 사용자 정보 찾기
         const user = users.find(user => user.clientId === loggedInUser.clientId);
@@ -43,9 +46,21 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.log(userReviews);
 
             if (userReviews.length > 0) {
+                activityListEl.innerHTML = ""; // 기존 리스트 초기화
+
                 userReviews.forEach(review => {
+
+                    const machine = machines.find(m => m.pageId === review.pageId);
+
+                    const machineName = machine.machineName;
+
                     const reviewItem = document.createElement("p");
-                    reviewItem.textContent = `📝 ${review.review} (평점: ${review.rating}점)`;
+                    const reviewLink = document.createElement("a");
+                    reviewLink.href = `./${review.pageId}.html`;
+                    reviewLink.textContent = `(${machineName}) - " ${review.review}" (평점: ${review.rating}점)`;
+                    reviewLink.classList.add("review-link"); // css 스타일 적용 class 추가
+
+                    reviewItem.appendChild(reviewLink);
                     activityListEl.appendChild(reviewItem);
                 });
             } else {
@@ -59,13 +74,13 @@ document.addEventListener("DOMContentLoaded", async function () {
         alert("서버 오류가 발생했습니다. 다시 시도해주세요.");
     }
 
-    editProfileBtn.addEventListener("click",function(){
-        location.href="./editProfile.html";
+    editProfileBtn.addEventListener("click", function () {
+        location.href = "./editProfile.html";
     })
 
     editNickBtn.addEventListener("click", function () {
         location.href = "./editNick.html";
     })
 
-    
+
 });

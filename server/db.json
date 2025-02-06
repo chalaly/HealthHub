@@ -9,16 +9,17 @@
       "banned": false
     },
     {
-      "id": "1378",
-      "clientName": "a",
-      "clientId": "a@naver.com",
-      "clientNick": "a",
-      "clientPwd": "a",
+      "id": "9b8f",
+      "clientName": "차준혁",
+      "clientId": "ckwnsgur0702@naver.com",
+      "clientNick": "chalaly",
+      "clientPwd": "ckwnsgur",
       "banned": false
     }
   ],
   "reviews": [
     {
+<<<<<<< HEAD
       "id": "a220",
       "pageId": "핵스쿼트",
       "nickname": "asd",
@@ -41,6 +42,123 @@
       "clientId": "asd@gmail.com",
       "review": "asd",
       "rating": 1
+=======
+      "id": "9022",
+      "pageId": "top_sub1",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "체스트 프레스는 기본이죠",
+      "rating": 5
+    },
+    {
+      "id": "a107",
+      "pageId": "top_sub2",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "헬스장 웃긴 영상에 뜨지 않게 주의깊게 보시길",
+      "rating": 5
+    },
+    {
+      "id": "ce5c",
+      "pageId": "top_sub3",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "어깨의 기본이죠~",
+      "rating": 5
+    },
+    {
+      "id": "b9a7",
+      "pageId": "top_sub5",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "딱봐도 어려워보이네",
+      "rating": 5
+    },
+    {
+      "id": "ab50",
+      "pageId": "top_sub4",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "이거 자극 죽이지~",
+      "rating": 5
+    }
+  ],
+  "machines": [
+    {
+      "pageId": "top_sub1",
+      "machineName": "체스트프레스",
+      "id": "990b"
+    },
+    {
+      "pageId": "top_sub2",
+      "machineName": "암컬머신",
+      "id": "014f"
+    },
+    {
+      "pageId": "top_sub3",
+      "machineName": "숄더프레스",
+      "id": "d8ae"
+    },
+    {
+      "pageId": "top_sub4",
+      "machineName": "레터럴로우",
+      "id": "f6dd"
+    },
+    {
+      "pageId": "top_sub5",
+      "machineName": "업도미널",
+      "id": "2be8"
+    },
+    {
+      "pageId": "bottom_sub1",
+      "machineName": "핵스쿼트",
+      "id": "6cc6"
+    },
+    {
+      "pageId": "bottom_sub2",
+      "machineName": "레그익스텐션",
+      "id": "ab3c"
+    },
+    {
+      "pageId": "bottom_sub3",
+      "machineName": "시티드레그프레스",
+      "id": "d8c3"
+    },
+    {
+      "pageId": "bottom_sub4",
+      "machineName": "파워레그프레스",
+      "id": "3fd1"
+    },
+    {
+      "pageId": "bottom_sub5",
+      "machineName": "시티드레그컬",
+      "id": "c704"
+    },
+    {
+      "pageId": "cardio_sub1",
+      "machineName": "무동력트레드밀",
+      "id": "61f9"
+    },
+    {
+      "pageId": "cardio_sub2",
+      "machineName": "런닝머신",
+      "id": "2299"
+    },
+    {
+      "pageId": "cardio_sub3",
+      "machineName": "클라임밀",
+      "id": "030f"
+    },
+    {
+      "pageId": "cardio_sub4",
+      "machineName": "스핀바이크",
+      "id": "2af9"
+    },
+    {
+      "pageId": "cardio_sub5",
+      "machineName": "로잉머신",
+      "id": "d607"
+>>>>>>> cha
     }
   ]
 }

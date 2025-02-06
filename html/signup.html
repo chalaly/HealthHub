@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="./css/font.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script defer src="../js/signup.js"></script>
 </head>
@@ -14,18 +15,18 @@
     <div class="signup_container">
         <div class="signup_box">
             <div class="header">
-                <span>Welcome!</span>
-                <p>Sign up now to become a member.</p>
+                <span>환영합니다!</span>
+                <p> 회원이 되려면 가입하세요</p>
             </div>
             <form id="signupForm">
-                <input id="emailInput" type="text" placeholder="Enter Email" required name="clientId" />
-                <input id="nameInput" type="text" placeholder="Enter Name" required name="clientName" />
-                <input id="nicknameInput" type="text" placeholder="Enter NickName" required name="clientNick" />
-                <input id="passwordInput" type="password" placeholder="Choose A Password" required name="clientPwd" />
-                <input id="confirmPasswordInput" type="password" placeholder="Re-Enter Password" required />
+                <input id="emailInput" type="text" placeholder="이메일을 입력하세요" required name="clientId" />
+                <input id="nameInput" type="text" placeholder="이름을 입력하세요" required name="clientName" />
+                <input id="nicknameInput" type="text" placeholder="닉네임을 입력하세요" required name="clientNick" />
+                <input id="passwordInput" type="password" placeholder="패스워드를 입력하세요" required name="clientPwd" />
+                <input id="confirmPasswordInput" type="password" placeholder="패스워드를 다시 입력하세요" required />
 
-                <button id="signupButton" type="submit">Signup</button>
-                <span> Already a member? <a href="./login.html">Login Here</a></span>
+                <button id="signupButton" type="submit">회원가입</button>
+                <span> 회원입니까? <a href="./login.html">로그인</a></span>
             </form>
         </div>
     </div>
