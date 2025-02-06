@@ -32,15 +32,19 @@ body.has-scroll footer {
 
 .footer-content {
     display: flex;
+    width: auto;
+    object-fit: contain;
     justify-content: space-between;
     /* 좌우 정렬 */
     align-items: center;
     /* 세로 중앙 정렬 */
     max-width: 1200px;
     /* 최대 너비 */
-    margin: 0 auto;
-    /* 중앙 정렬 */
+
+    padding: 0 5%;
+    
 }
+
 
 .logo-text {
     display: flex;
