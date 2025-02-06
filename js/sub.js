@@ -5,7 +5,8 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 
 // 리뷰 관련 요소 가져오기
-const pageId = document.querySelector("main").id; // id로 가져오면 js전체 바꿔야함
+const pageElement = document.querySelector("main");
+const pageId = pageElement.dataset.equipmentName; // data-equipment-name 값 가져오기
 console.log(pageId);
 const reviewsList = document.getElementById('reviews-list');
 const averageRatingValue = document.getElementById('average-rating-value');
@@ -36,7 +37,7 @@ function updateAverageRating() {
 updateAverageRating();
 
 //  로그인되지 않은 사용자는 리뷰 폼을 비활성화
-if (!loggedInUser) {
+if (!loggedInUser || loggedInUser.clientId === "admin") {
 
     reviewText.disabled = true;  // 텍스트 입력 비활성화
     ratingSelect.disabled = true; // 평점 선택 비활성화
@@ -109,7 +110,7 @@ function addReviewToList(review) {
     //  로그인한 사용자가 해당 리뷰의 작성자(clientId)와 일치할 경우 삭제 버튼 추가
     if (loggedInUser && review.clientId === loggedInUser.clientId) {
         const deleteButton = document.createElement('button');
-        deleteButton.innerHTML = "&#10006;"; //x 아이콘 html 엔티티티
+        deleteButton.innerHTML = "&#10006;"; //x 아이콘 html 엔티티
         deleteButton.classList.add("delete-button");
         deleteButton.title = "삭제"; // 마우스를 올리면 '삭제'라고 표시됨
 
@@ -121,7 +122,7 @@ function addReviewToList(review) {
             }
         });
 
-        reviewElement.appendChild(deleteButton); // 삭제 버튼 추가가
+        reviewElement.appendChild(deleteButton); // 삭제 버튼 추가
     }
 
     reviewsList.appendChild(reviewElement);
@@ -168,6 +169,7 @@ reviewForm.addEventListener('submit', async function (e) {
     try {
         // ** Axios를 사용하여 서버에 데이터 전송**
         const response = await axios.post("http://localhost:3000/reviews", newReview);
+        console.log(response)
 
         if (response.status === 201) {
             // 리뷰 목록에 추rk

@@ -9,13 +9,46 @@
       "banned": false
     },
     {
+<<<<<<< HEAD
       "id": "1378",
       "clientName": "a",
       "clientId": "a@naver.com",
       "clientNick": "a",
       "clientPwd": "a",
+=======
+      "id": "cb96",
+      "clientName": "asd",
+      "clientId": "asd@gmail.com",
+      "clientNick": "asd",
+      "clientPwd": "asd",
+>>>>>>> kkm
       "banned": false
     }
   ],
-  "reviews": []
+  "reviews": [
+    {
+      "id": "a220",
+      "pageId": "핵스쿼트",
+      "nickname": "asd",
+      "clientId": "asd@gmail.com",
+      "review": "asd",
+      "rating": 4
+    },
+    {
+      "id": "1da2",
+      "pageId": "레그익스텐션",
+      "nickname": "asd",
+      "clientId": "asd@gmail.com",
+      "review": "sss",
+      "rating": 5
+    },
+    {
+      "id": "43ef",
+      "pageId": "레그익스텐션",
+      "nickname": "asd",
+      "clientId": "asd@gmail.com",
+      "review": "asd",
+      "rating": 1
+    }
+  ]
 }

@@ -2,16 +2,52 @@
 
 // 페이지가 완전히 로드되었을 때 실행
 // 리뷰 및 사용자 데이터를 가져오고, 테이블을 렌더링함
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+
+
     let reviews = []; // 리뷰 데이터를 저장할 배열
     let users = []; // 사용자 데이터를 저장할 배열
+    updateHeader(); //  페이지 로드 시 로그인 상태 업데이트 실행
+    
+    //  로그인 상태 업데이트 함수
+    function updateHeader() {
+        const dropdownBox = document.querySelector(".dropdown_box");
+        if (!dropdownBox) {
+            if (attempts > 0) {
+                console.warn(`헤더가 아직 로드되지 않음`);
+            }
+            return;
+        }
+    
+        const storedUser = localStorage.getItem("loggedInUser");
+        const loggedInUser = storedUser ? JSON.parse(storedUser) : null;
+        console.log(loggedInUser)
+        
+        if (loggedInUser) {
+            dropdownBox.innerHTML = `
+            <a href="#" id="logoutBtn" class="dropdown_link">로그아웃</a>
+            `;
+            
+            document.querySelector(".dropdown_link").addEventListener("click", function (event) {
+                event.preventDefault();
+                localStorage.removeItem("loggedInUser");
+                alert("로그아웃되었습니다.");
+                window.location.href = "../index.html"
+            });
+        }
+    }
+    
+    //  뒤로 가기 했을 때도 로그인 상태 업데이트 (캐시 문제 해결)
+    window.addEventListener("pageshow", function () {
+        updateHeader();
+    });
 
     // 평균 평점 및 총 리뷰 개수를 화면에 업데이트하는 함수
     function updateStats() {
         document.getElementById("averageRating").textContent = calculateAverageRating();
         document.getElementById("totalReviews").textContent = reviews.length;
     }
-
+    
     // 서버에서 리뷰 데이터를 비동기적으로 가져오는 함수
     async function fetchReviews() {
         try {
@@ -22,19 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("리뷰 데이터를 가져오는 중 오류 발생:", error);
         }
     }
-
+    
     // 서버에서 사용자 데이터를 비동기적으로 가져오는 함수
     async function fetchUsers() {
         try {
             const response = await axios.get("http://localhost:3000/clientData");
-            users = response.data;
-            users = response.data.filter(user => user.clientName !== admin);
+            users = response.data.filter(user => user.clientName !== "admin");
             renderUsers(); // 가져온 데이터를 화면에 반영
         } catch (error) {
             console.error("사용자 데이터를 가져오는 중 오류 발생:", error);
         }
     }
-
+    
     // 특정 리뷰를 삭제하는 함수
     async function deleteReview(id) {
         try {
@@ -45,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("리뷰 삭제 중 오류 발생:", error);
         }
     }
-
+    
     // 특정 사용자를 강제 탈퇴시키는 함수
     async function deleteUser(id) {
         try {
@@ -56,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("사용자 강제 탈퇴 중 오류 발생:", error);
         }
     }
-
+    
     // 특정 사용자를 차단하는 함수
     async function banUser(id) {
         try {
@@ -67,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("사용자 차단 중 오류 발생:", error);
         }
     }
-
+    
     // 특정 사용자의 차단을 해제하는 함수
     async function unbanUser(id) {
         try {
@@ -78,14 +113,14 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("사용자 차단 해제 중 오류 발생:", error);
         }
     }
-
+    
     // 평균 평점을 계산하는 함수
     function calculateAverageRating() {
         if (reviews.length === 0) return 0;
         const total = reviews.reduce((sum, review) => sum + review.rating, 0); // 전체 평점 합산 후 평균 계산
         return parseFloat((total / reviews.length).toFixed(1)); // 소수점 첫째 자리까지 표시
     }
-
+    
     // 리뷰 데이터를 테이블에 렌더링하는 함수
     function renderReviews() {
         const reviewTableBody = document.getElementById("reviewTableBody");
@@ -93,20 +128,20 @@ document.addEventListener("DOMContentLoaded", () => {
         reviews.forEach(review => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${review.nickname}</td>
-                <td>${review.rating}</td>
-                <td>${review.pageId}</td>
-                <td>${review.review}</td>
-                <td>
-                    <button type="button" class="delete">삭제</button>
-                </td>
+            <td>${review.nickname}</td>
+            <td>${review.rating}</td>
+            <td>${review.pageId}</td>
+            <td>${review.review}</td>
+            <td>
+            <button type="button" class="delete">삭제</button>
+            </td>
             `;
             row.querySelector(".delete").addEventListener("click", () => deleteReview(review.id)); // 삭제 버튼 이벤트 추가
             reviewTableBody.appendChild(row);
         });
         updateStats(); // 통계 업데이트
     }
-
+    
     // 사용자 데이터를 테이블에 렌더링하는 함수
     function renderUsers() {
         const userTableBody = document.getElementById("userTableBody");
@@ -114,13 +149,13 @@ document.addEventListener("DOMContentLoaded", () => {
         users.forEach(user => {
             const row = document.createElement("tr");
             row.innerHTML = `
-                <td>${user.clientName}</td>
-                <td>${user.banned ? "차단됨" : "활성"}</td>
-                <td>
-                    <button type="button" class="ban-toggle ${user.banned ? 'banned' : 'active'}">
-                    ${user.banned ? "해제" : "차단"}</button>
-                    <button type="button" class="delete">강제탈퇴</button>
-                </td>
+            <td>${user.clientName}</td>
+            <td>${user.banned ? "차단됨" : "활성"}</td>
+            <td>
+            <button type="button" class="ban-toggle ${user.banned ? 'banned' : 'active'}">
+            ${user.banned ? "해제" : "차단"}</button>
+            <button type="button" class="delete">강제탈퇴</button>
+            </td>
             `;
             const banButton = row.querySelector(".ban-toggle");
             banButton.addEventListener("click", () => {
@@ -130,8 +165,13 @@ document.addEventListener("DOMContentLoaded", () => {
             userTableBody.appendChild(row);
         });
     }
-
+    
     // 페이지 로드 시 리뷰 및 사용자 데이터를 가져오는 함수 실행
     fetchReviews();
     fetchUsers();
+    
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+    history.pushState(null, null, location.href);
+    };
 });
