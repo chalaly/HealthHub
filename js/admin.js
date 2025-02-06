@@ -4,6 +4,11 @@
 // 리뷰 및 사용자 데이터를 가져오고, 테이블을 렌더링함
 document.addEventListener("DOMContentLoaded", function () {
 
+    const apiclient = 'http://localhost:3000/clientData',
+          apiclientid = `http://localhost:3000/clientData/${id}`,
+          apireview = 'http://localhost:3000/reviews',
+          apireviewid = `http://localhost:3000/reviews/${id}`;
+
 
     let reviews = []; // 리뷰 데이터를 저장할 배열
     let users = []; // 사용자 데이터를 저장할 배열
@@ -51,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 서버에서 리뷰 데이터를 비동기적으로 가져오는 함수
     async function fetchReviews() {
         try {
-            const reviewsResponse = await axios.get("http://localhost:3000/reviews");
+            const reviewsResponse = await axios.get(apireview);
             reviews = reviewsResponse.data;
             renderReviews(); // 가져온 데이터를 화면에 반영
         } catch (error) {
@@ -62,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 서버에서 사용자 데이터를 비동기적으로 가져오는 함수
     async function fetchUsers() {
         try {
-            const response = await axios.get("http://localhost:3000/clientData");
+            const response = await axios.get(apiclient);
             users = response.data.filter(user => user.clientName !== "admin");
             renderUsers(); // 가져온 데이터를 화면에 반영
         } catch (error) {
@@ -73,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 특정 리뷰를 삭제하는 함수
     async function deleteReview(id) {
         try {
-            await axios.delete(`http://localhost:3000/reviews/${id}`);
+            await axios.delete(apireviewid);
             reviews = reviews.filter(review => review.id !== id); // 배열에서 해당 리뷰 제거
             renderReviews(); // 변경 사항을 화면에 반영
         } catch (error) {
@@ -84,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 특정 사용자를 강제 탈퇴시키는 함수
     async function deleteUser(id) {
         try {
-            await axios.delete(`http://localhost:3000/clientData/${id}`);
+            await axios.delete(apiclientid);
             users = users.filter(user => user.id !== id); // 배열에서 해당 사용자 제거
             renderUsers(); // 변경 사항을 화면에 반영
         } catch (error) {
@@ -95,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 특정 사용자를 차단하는 함수
     async function banUser(id) {
         try {
-            await axios.patch(`http://localhost:3000/clientData/${id}`, { banned: true });
+            await axios.patch(apiclientid, { banned: true });
             users = users.map(user => user.id === id ? { ...user, banned: true } : user); // 해당 사용자 차단 상태 변경
             renderUsers(); // 변경 사항을 화면에 반영
         } catch (error) {
@@ -106,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 특정 사용자의 차단을 해제하는 함수
     async function unbanUser(id) {
         try {
-            await axios.patch(`http://localhost:3000/clientData/${id}`, { banned: false });
+            await axios.patch(apiclientid, { banned: false });
             users = users.map(user => user.id === id ? { ...user, banned: false } : user); // 해당 사용자 차단 해제
             renderUsers(); // 변경 사항을 화면에 반영
         } catch (error) {
