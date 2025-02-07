@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (loggedInUser) {
             dropdownBox.innerHTML = `
                 <a href="../html/about.html" class="dropdown_link">소개</a>
-                <a href="../html/mypage.html" class="dropdown_link">마이페이지</a>
+                <a href="../html/qna.html" class="dropdown_link">Q&A</a>
+                <a href="../mypage.html" class="dropdown_link">마이페이지</a>
                 <a href="#" id="logoutBtn" class="dropdown_link">로그아웃</a>
             `;
 

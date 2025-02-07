@@ -1,0 +1,54 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container { 
+    width: 50%; 
+    margin: auto; 
+}
+
+.question-box, .answer-box { 
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    margin: 10px 0; 
+}
+
+.question-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textarea-button-wrapper {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+
+.textarea-button-wrapper textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.textarea-button-wrapper button {
+    padding: 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.textarea-button-wrapper button:hover {
+    background-color: #0056b3;
+}
+
+#question-title {
+    width: 20%;
+}

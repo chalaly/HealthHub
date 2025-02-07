@@ -17,7 +17,7 @@ body.has-scroll footer {
 }
 
 
-/* 푸터를 컨텐츠 맨 아래로 이동하도록 설정 */
+푸터를 컨텐츠 맨 아래로 이동하도록 설정
 .wrapper {
     display: flex;
     flex-direction: column;
