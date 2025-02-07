@@ -196,7 +196,11 @@ h1::after {
 }
 
 /* div 요소의 하단 여백 설정 */
-div {
+.container>div {
+    margin-bottom: 2%;
+}
+/* box3 텍스트 하단 여백 설정 */
+.box3>strong>div {
     margin-bottom: 2%;
 }
 
