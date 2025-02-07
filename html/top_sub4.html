@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/scroll.css">
     <script defer src="../js/scroll.js"></script>
     <script defer src="../js/header.js"></script>
@@ -49,11 +49,16 @@
                     <li><strong>장점 :</strong>
                         좌우가 독립적이므로 자세의 불균형을 방지할 수 있습니다.
                     </li>
-                    <li><strong>사용법 :</strong>
-                        발을 발판에 올려 고정합니다.
-                        상체를 패드에 밀착하고 등을 곧게 폅니다.
-                        손잡이를 어깨너비로 잡고 팔꿈치를 뒤로 당기며 광배근을 수축시킵니다.
-                        손잡이를 원위치로 돌려놓습니다.
+                    <li>
+                        <div class="usage-container">
+                            <div class="usage-title">사용법:</div>
+                            <div class="usage-text">
+                            발을 발판에 올려 고정합니다.
+                            상체를 패드에 밀착하고 등을 곧게 폅니다.
+                            손잡이를 어깨너비로 잡고 팔꿈치를 뒤로 당기며 광배근을 수축시킵니다.
+                            손잡이를 원위치로 돌려놓습니다.
+                            </div>
+                        </div>
                     </li>
                     <li><strong>팁 :</strong>
                         팔이 아닌 등 근육을 사용하여 당깁니다.
@@ -67,10 +72,20 @@
             </div>
         </section>
 
-        <div class="button-container">
-            <button class="hover-button" onmouseover="showImage()" onmouseout="hideImage()">동작부위</button>
-            <img id="hoverImage" class="hover-image" src="../img/hammerback_sub.png" alt="미리보기 이미지">
+        <!-- "동작부위" 버튼을 클릭하면 팝업 열기 -->
+        <button class="hover-button" onclick="openPopup()">동작부위</button>
+        
+        <!-- 팝업창 -->
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <h3>운동 부위</h3>
+                <img src="../img/hammerback_sub.png" alt="운동 부위 이미지" class="popup-image">
+            </div>
         </div>
+        
+        
+        <hr>
 
         <!-- 사용자 한줄평 섹션 -->
         <section class="reviews-section">
@@ -78,7 +93,9 @@
 
             <!-- 평균 평점 표시 -->
             <div id="average-rating">
-                <strong>평균 평점:</strong> <span id="average-rating-value">0.0</span> / 5.0
+                <strong>평균 평점:</strong>
+                <span id="average-rating-value">0.0</span> / 5.0
+                <div id="star-average-rating"></div>
             </div>
 
             <div id="reviews-list">
@@ -109,24 +126,22 @@
                 <button type="submit">리뷰 제출</button>
             </form>
 
+            <button id="scrollToTop">
+                <img src="../img/scroll.png" alt="위로 가기" class="up-arrow">
+            </button>
+
         </section>
+
+        <footer id="footer-container">
+        
+        </footer>
 
     </main>
 
-    <footer>
-        <footer id="footer-container">
-            <div class="footer-content">
-                <!-- 로고와 텍스트 -->
-                <div class="logo-text">
-                    <img src="../img/logo.png" alt="밑밑 로고" class="footer_logo">
-                    <div class="text">
-                        <p>인천 광역시 테크노파크22길 7-22 (리리)</p>
-                        <p>대표전화: 032-111-1111 | 팩스번호: 022-222-2222</p>
-                        <p>© 2025 Health Hub. All rights reserved.</p>
+    
 
-                    </div>
-                </div>
-        </footer>
+
+    
 </body>
 
 </html>

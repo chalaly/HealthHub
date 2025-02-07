@@ -1,3 +1,9 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 footer {
     background-color: black;
     color: white;
@@ -8,6 +14,9 @@ footer {
     left: 0;
     z-index: 1000;
     overflow: hidden;
+    
+    transition: visibility 0s 0.2s, opacity 0.3s ease-in-out;
+        /* 부드러운 전환 */
 }
 
 /* 푸터를 컨텐츠 아래 위치하도록 설정 (스크롤이 있을 때) */
@@ -16,8 +25,13 @@ body.has-scroll footer {
     /* 스크롤이 생기면 푸터를 콘텐츠 아래로 이동 */
 }
 
+/*풋터 활성화 되었을때*/
+body.footer-visible footer {
+    opacity: 1;
+}
 
-푸터를 컨텐츠 맨 아래로 이동하도록 설정
+
+/*푸터를 컨텐츠 맨 아래로 이동하도록 설정*/
 .wrapper {
     display: flex;
     flex-direction: column;

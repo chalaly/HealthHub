@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/scroll.css">
     <script defer src="../js/scroll.js"></script>
     <script defer src="../js/header.js"></script>
@@ -50,10 +50,15 @@
                         스스로 속도를 조절하여 자신의 페이스대로 달릴 수 있기 때문에
                         실제 조깅이나 마라톤과 유사한 운동효과를 낼 수 있습니다.
                     </li>
-                    <li><strong>사용법 :</strong>
-                        손잡이를 잡아 걷기 시작하여 중심을 잡고,
-                        걷는 게 익숙해지면 손을 손잡이에서 내려놓고 걷습니다.
-                        그 이후 천천히 조깅하듯 뜁니다.
+                    <li>
+                        <div class="usage-container">
+                            <div class="usage-title">사용법:</div>
+                            <div class="usage-text">
+                                손잡이를 잡아 걷기 시작하여 중심을 잡고,
+                                걷는 게 익숙해지면 손을 손잡이에서 내려놓고 걷습니다.
+                                그 이후 천천히 조깅하듯 뜁니다.
+                            </div>
+                        </div>
                     </li>
                     <li><strong>팁 :</strong>
                         몸을 숙이고 밀어내듯 수행 시 코어와 하체 근력에 도움이 됩니다.
@@ -67,10 +72,20 @@
             </div>
         </section>
 
-        <div class="button-container">
-            <button class="hover-button" onmouseover="showImage()" onmouseout="hideImage()">동작부위</button>
-            <img id="hoverImage" class="hover-image" src="../img/draxtreadmill_sub.png" alt="미리보기 이미지">
+        <!-- "동작부위" 버튼을 클릭하면 팝업 열기 -->
+        <button class="hover-button" onclick="openPopup()">동작부위</button>
+        
+        <!-- 팝업창 -->
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <h3>운동 부위</h3>
+                <img src="../img/draxtreadmill_sub.png" alt="운동 부위 이미지" class="popup-image">
+            </div>
         </div>
+        
+        
+        <hr>
 
         <!-- 사용자 한줄평 섹션 -->
         <section class="reviews-section">
@@ -78,9 +93,12 @@
 
             <!-- 평균 평점 표시 -->
             <div id="average-rating">
-                <strong>평균 평점:</strong> <span id="average-rating-value">0.0</span> / 5.0
+                <strong>평균 평점:</strong>
+                <span id="average-rating-value">0.0</span> / 5.0
+                <div id="star-average-rating"></div>
             </div>
 
+            
             <div id="reviews-list">
                 <div class="review">
                     <p><strong>닉네임1:</strong> 유산소는 역시 역사와 전통의 트레드밀</p>
@@ -109,24 +127,17 @@
                 <button type="submit">리뷰 제출</button>
             </form>
 
+            <button id="scrollToTop">
+                <img src="../img/scroll.png" alt="위로 가기" class="up-arrow">
+            </button>
+
         </section>
 
     </main>
 
-    <footer>
-        <footer id="footer-container">
-            <div class="footer-content">
-                <!-- 로고와 텍스트 -->
-                <div class="logo-text">
-                    <img src="../img/logo.png" alt="밑밑 로고" class="footer_logo">
-                    <div class="text">
-                        <p>인천 광역시 테크노파크22길 7-22 (리리)</p>
-                        <p>대표전화: 032-111-1111 | 팩스번호: 022-222-2222</p>
-                        <p>© 2025 Health Hub. All rights reserved.</p>
-
-                    </div>
-                </div>
-        </footer>
+    <footer id="footer-container">
+    
+    </footer>
 
 </body>
 

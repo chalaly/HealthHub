@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/scroll.css">
     <script defer src="../js/scroll.js"></script>
     <script defer src="../js/header.js"></script>
@@ -49,12 +49,17 @@
                     <li><strong>장점 :</strong>
                         햄스트링을 중점적으로 운동할 수 있습니다.
                     </li>
-                    <li><strong>사용법 :</strong>
-                        무릎이 패드 앞쪽에 위치하도록 등받이를 조절합니다.
-                        다리 고정패드를 내려 다리를 고정합니다.
-                        발 패드가 종아리와 아킬레스건 사이에 오도록 조절합니다.
-                        엉덩이를 패드 끝에 박아 놓고 위에 있는 손잡이를 잡고 다리를 밑으로 내립니다.
-                        다시 올려주며 이완합니다.
+                    <li>
+                        <div class="usage-container">
+                            <div class="usage-title">사용법:</div>
+                            <div class="usage-text">
+                                무릎이 패드 앞쪽에 위치하도록 등받이를 조절합니다.
+                                다리 고정패드를 내려 다리를 고정합니다.
+                                발 패드가 종아리와 아킬레스건 사이에 오도록 조절합니다.
+                                엉덩이를 패드 끝에 박아 놓고 위에 있는 손잡이를 잡고 다리를 밑으로 내립니다.
+                                다시 올려주며 이완합니다.
+                            </div>
+                        </div>
                     </li>
                     <li><strong>팁 :</strong>
                         발끝을 세워 온전히 허벅지 뒤쪽의 힘을 사용합니다.
@@ -68,18 +73,29 @@
             </div>
         </section>
 
-        <div class="button-container">
-            <button class="hover-button" onmouseover="showImage()" onmouseout="hideImage()">동작부위</button>
-            <img id="hoverImage" class="hover-image" src="../img/matrixleg_sub.png" alt="미리보기 이미지">
+        <!-- "동작부위" 버튼을 클릭하면 팝업 열기 -->
+        <button class="hover-button" onclick="openPopup()">동작부위</button>
+        
+        <!-- 팝업창 -->
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <h3>운동 부위</h3>
+                <img src="../img/matrixleg_sub.png" alt="운동 부위 이미지" class="popup-image">
+            </div>
         </div>
-
+        
+        
+        <hr>
         <!-- 사용자 한줄평 섹션 -->
         <section class="reviews-section">
             <h2>사용자 한줄평</h2>
 
             <!-- 평균 평점 표시 -->
             <div id="average-rating">
-                <strong>평균 평점:</strong> <span id="average-rating-value">0.0</span> / 5.0
+                <strong>평균 평점:</strong>
+                <span id="average-rating-value">0.0</span> / 5.0
+                <div id="star-average-rating"></div>
             </div>
 
             <div id="reviews-list">
@@ -110,24 +126,17 @@
                 <button type="submit">리뷰 제출</button>
             </form>
 
+            <button id="scrollToTop">
+                <img src="../img/scroll.png" alt="위로 가기" class="up-arrow">
+            </button>
+
         </section>
 
     </main>
 
-    <footer>
-        <footer id="footer-container">
-            <div class="footer-content">
-                <!-- 로고와 텍스트 -->
-                <div class="logo-text">
-                    <img src="../img/logo.png" alt="밑밑 로고" class="footer_logo">
-                    <div class="text">
-                        <p>인천 광역시 테크노파크22길 7-22 (리리)</p>
-                        <p>대표전화: 032-111-1111 | 팩스번호: 022-222-2222</p>
-                        <p>© 2025 Health Hub. All rights reserved.</p>
-
-                    </div>
-                </div>
-        </footer>
+    <footer id="footer-container">
+    
+    </footer>
 </body>
 
 </html>

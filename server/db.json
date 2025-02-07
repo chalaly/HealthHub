@@ -17,6 +17,15 @@
       "banned": false
     }
   ],
+  "questions": [
+    {
+      "id": "1a20",
+      "title": "zzzzz",
+      "content": "zzzzzzzzzzzzzzz",
+      "answer": "",
+      "author": "chalaly"
+    }
+  ],
   "reviews": [
     {
       "id": "9022",
@@ -57,6 +66,22 @@
       "clientId": "ckwnsgur0702@naver.com",
       "review": "이거 자극 죽이지~",
       "rating": 5
+    },
+    {
+      "id": "9668",
+      "pageId": "top_sub1",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "기본 맞죠?",
+      "rating": 4
+    },
+    {
+      "id": "3f68",
+      "pageId": "top_sub1",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "이거보다 숄더 프레스가 더 좋던데;;",
+      "rating": 2
     }
   ],
   "machines": [

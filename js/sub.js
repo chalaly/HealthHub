@@ -62,6 +62,21 @@ function calculateAverageRating() {
 // 평균 평점 업데이트 함수
 function updateAverageRating() {
     const average = calculateAverageRating(); // 평균 평점 계산
+
+    // // 오류검사
+    // if (average === undefined || isNaN(average)) {
+    //     console.warn("평균 평점 데이터가 없습니다.");
+    //     return; // 데이터가 없으면 함수 실행 중단
+    // }
+
+    // const starRatingElement = document.getElementById("star-average-rating");
+
+    // if (!starRatingElement) {
+    //     console.error("오류: 'star-average-rating' 요소를 찾을 수 없습니다!");
+    //     return; // 요소가 없으면 함수 실행 중단
+    // }
+
+
     averageRatingValue.textContent = average; // 숫자 표시
     document.getElementById("star-average-rating").innerHTML = getStarRating(average); // 별 UI 표시
 }
@@ -81,14 +96,6 @@ if (!loggedInUser || loggedInUser.clientId === "admin") {
     submitButton.style.pointerEvents = "none";
 }
 
-// 이미지 hover 효과
-window.showImage = function () {
-    document.getElementById('hoverImage').style.display = 'block';
-};
-
-window.hideImage = function () {
-    document.getElementById('hoverImage').style.display = 'none';
-};
 
 
 // HTML에서 기존 리뷰 가져오기

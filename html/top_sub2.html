@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/sub.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/scroll.css">
     <script defer src="../js/scroll.js"></script>
     <script defer src="../js/header.js"></script>
@@ -49,10 +49,15 @@
                     <li><strong>장점 :</strong>
                         고립을 극대화시켜 이두근에만 집중할 수 있습니다.
                     </li>
-                    <li><strong>사용법 :</strong>
-                        팔꿈치를 패드에 밀착시킨 뒤 어깨너비정도로 손바닥이 하늘을 향하게 잡습니다.
-                        팔꿈치가 고정된 채로 이두근을 사용해 팔을 말아 올립니다.
-                        무게를 받으며 천천히 내려 이완시킵니다.
+                    <li>
+                        <div class="usage-container">
+                        <div class="usage-title">사용법:</div>
+                        <div class="usage-text">
+                            팔꿈치를 패드에 밀착시킨 뒤 어깨너비정도로 손바닥이 하늘을 향하게 잡습니다.
+                            팔꿈치가 고정된 채로 이두근을 사용해 팔을 말아 올립니다.
+                            무게를 받으며 천천히 내려 이완시킵니다.
+                        </div>
+                        </div>
                     </li>
                     <li><strong>팁 :</strong>
                         최대 이완 시 더 많은 자극을 느낄 수 있습니다.
@@ -66,18 +71,29 @@
             </div>
         </section>
 
-        <div class="button-container">
-            <button class="hover-button" onmouseover="showImage()" onmouseout="hideImage()">동작부위</button>
-            <img id="hoverImage" class="hover-image" src="../img/primearm_sub.png" alt="미리보기 이미지">
+        <!-- "동작부위" 버튼을 클릭하면 팝업 열기 -->
+        <button class="hover-button" onclick="openPopup()">동작부위</button>
+        
+        <!-- 팝업창 -->
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <h3>운동 부위</h3>
+                <img src="../img/primearm_sub.png" alt="운동 부위 이미지" class="popup-image">
+            </div>
         </div>
-
+        
+        
+        <hr>
         <!-- 사용자 한줄평 섹션 -->
         <section class="reviews-section">
             <h2>사용자 한줄평</h2>
 
             <!-- 평균 평점 표시 -->
             <div id="average-rating">
-                <strong>평균 평점:</strong> <span id="average-rating-value">0.0</span> / 5.0
+                <strong>평균 평점:</strong>
+                <span id="average-rating-value">0.0</span> / 5.0
+                <div id="star-average-rating"></div>
             </div>
 
             <div id="reviews-list">
@@ -108,26 +124,17 @@
                 <button type="submit">리뷰 제출</button>
             </form>
 
+            <button id="scrollToTop">
+                <img src="../img/scroll.png" alt="위로 가기" class="up-arrow">
+            </button>
+
         </section>
 
     </main>
 
-    <footer>
-        <footer id="footer-container">
-            <div class="footer-content">
-                <!-- 로고와 텍스트 -->
-                <div class="logo-text">
-                    <img src="../img/logo.png" alt="밑밑 로고" class="footer_logo">
-                    <div class="text">
-                        <p>인천 광역시 테크노파크22길 7-22 (리리)</p>
-                        <p>대표전화: 032-111-1111 | 팩스번호: 022-222-2222</p>
-                        <p>© 2025 Health Hub. All rights reserved.</p>
+    <footer id="footer-container">
 
-                    </div>
-                </div>
-        </footer>
-
-        <script defer src="../js/sub.js"></script>
+    </footer>
 
 </body>
 
