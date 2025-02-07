@@ -17,30 +17,13 @@
       "banned": false
     }
   ],
-  "reviews": [
-    {
-      "id": "827d",
-      "pageId": "cardio_sub3",
-      "nickname": "a",
-      "clientId": "a@naver.com",
-      "review": "asdasdasd",
-      "rating": 5
-    },
-    {
-      "id": "f94e",
-      "pageId": "cardio_sub3",
-      "nickname": "a",
-      "clientId": "a@naver.com",
-      "review": "11111",
-      "rating": 3
-    }
-  ],
+  "reviews": [],
   "questions": [
     {
       "id": "0c62",
       "title": "a",
       "content": "a",
-      "answer": "asd",
+      "answer": "a만 쓰지 마세요",
       "author": "a"
     }
   ],
