@@ -9,13 +9,7 @@ let loggedInUser = window.loggedInUser;
 
 
 // 리뷰 관련 요소 가져오기
-<<<<<<< HEAD
-const pageElement = document.querySelector("main");
-const pageId = pageElement.dataset.equipmentName; // data-equipment-name 값 가져오기
-console.log(pageId);
-=======
 const pageId = document.querySelector("main").id; // id로 가져오면 js전체 바꿔야함
->>>>>>> cha
 const reviewsList = document.getElementById('reviews-list');
 const averageRatingValue = document.getElementById('average-rating-value');
 const reviewForm = document.getElementById('review-form');
