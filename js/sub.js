@@ -18,9 +18,40 @@ const ratingSelect = document.getElementById('rating');
 const submitButton = document.querySelector("#review-form button[type='submit']");
 
 
+
 let ratings = []; // 기존 초기 평점 데이터
 
 
+// 별 가져오는
+function getStarRating(score) {
+    const maxStars = 5; // 항상 별 5개 유지
+    const fullStar = "../img/full-star.png";  // 가득 찬 별 이미지 경로
+    const halfStar = "../img/half-star.png";  // 반쪽 별 이미지 경로
+    const emptyStar = "../img/empty-star.png"; // 빈 별 이미지 경로
+
+    let starsHTML = "";
+    let fullStars = Math.floor(score); // 정수 부분 (예: 3.6 → 3)
+    let hasHalfStar = score % 1 >= 0.5; // 반쪽 별 여부 (예: 3.5 이상일 때 적용)
+
+    //  가득 찬 별 추가
+    for (let i = 0; i < fullStars; i++) {
+        starsHTML += `<img src="${fullStar}" class="star">`;
+    }
+
+    //  반쪽 별 추가 (3.5 이상일 때 반쪽 별 이미지 적용)
+    if (hasHalfStar && fullStars < maxStars) {
+        starsHTML += `<img src="${halfStar}" class="star">`;
+        fullStars++; // 반쪽 별도 포함
+    }
+
+    //  빈 별 추가 (최대 5개 유지)
+    while (fullStars < maxStars) {
+        starsHTML += `<img src="${emptyStar}" class="star">`;
+        fullStars++;
+    }
+
+    return starsHTML;
+}
 
 // 평균 평점 계산 함수
 function calculateAverageRating() {
@@ -30,7 +61,9 @@ function calculateAverageRating() {
 
 // 평균 평점 업데이트 함수
 function updateAverageRating() {
-    averageRatingValue.textContent = calculateAverageRating();
+    const average = calculateAverageRating(); // 평균 평점 계산
+    averageRatingValue.textContent = average; // 숫자 표시
+    document.getElementById("star-average-rating").innerHTML = getStarRating(average); // 별 UI 표시
 }
 
 
@@ -240,3 +273,17 @@ async function deleteReview(reviewId) {
         alert("리뷰 삭제에 실패했습니다. 다시 시도해주세요.");
     }
 }
+
+
+// 팝업 열기 함수
+function openPopup() {
+    document.getElementById("popup").style.display = "block";
+}
+
+// 팝업 닫기 함수
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+// 동작부위 버튼 클릭 시 팝업 열기
+document.querySelector(".hover-button").addEventListener("click", openPopup);
