@@ -6,8 +6,7 @@ const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
 // 리뷰 관련 요소 가져오기
 const pageElement = document.querySelector("main");
-const pageId = pageElement.dataset.equipmentName; // data-equipment-name 값 가져오기
-console.log(pageId);
+const pageId = document.querySelector("main").id;
 const reviewsList = document.getElementById('reviews-list');
 const averageRatingValue = document.getElementById('average-rating-value');
 const reviewForm = document.getElementById('review-form');

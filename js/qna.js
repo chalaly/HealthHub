@@ -1,5 +1,15 @@
+'use strict'
 
 const apiUrl = 'http://localhost:3000/questions';
+const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if (!loggedInUser || loggedInUser.clientId === "admin") {
+
+    addQuestion.disabled = true;
+    textarea.disabled = true;
+    button.disabled = true;
+    button.style.pointerEvents = "none";
+}
 
 // 질문 추가하기
 function addQuestion() {
@@ -11,7 +21,7 @@ function addQuestion() {
         return;
     }
 
-    axios.post(apiUrl, { title, content, answer: '' })
+    axios.post(apiUrl, { title, content, answer: '', author: loggedInUser.clientNick })
         .then(() => {
             document.getElementById('question-title').value = '';
             document.getElementById('question-content').value = '';
@@ -25,12 +35,12 @@ function loadQuestions() {
         .then(res => {
             const questionList = document.getElementById('questions-list');
             questionList.innerHTML = '';
-            res.data.forEach(q => {
+            res.data.filter(q => q.author === loggedInUser.clientNick).forEach(q => {
                 questionList.innerHTML += `
                     <div class="question-box">
-                        <h4>${q.title}</h4>
-                        <p>${q.title} : ${q.content}</p>
-                        <p><strong>답변:</strong> ${q.answer || '아직 답변이 없습니다.'}</p>
+                        <p><strong>작성자 :</strong> ${q.author || '익명'}</p>
+                        <p><strong>${q.title} :</strong> ${q.content}</p>
+                        <p><strong>답변 :</strong> ${q.answer || '아직 답변이 없습니다.'}</p>
                     </div>
                 `;
             });
