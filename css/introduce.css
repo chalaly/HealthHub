@@ -227,7 +227,11 @@ div {
 .snsbox {
     margin-left: 74.5%;
     display: inline-block;
+}
 
+.sns {
+    border: none;
+    background-color: transparent;
 }
 
 .img3 {
