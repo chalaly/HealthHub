@@ -229,6 +229,7 @@ h1::after {
 }
 
 .snsbox {
+    margin-bottom: 2%;
     margin-left: 74.5%;
     display: inline-block;
 }
