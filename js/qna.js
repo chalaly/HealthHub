@@ -3,18 +3,22 @@
 const apiUrl = 'http://localhost:3000/questions';
 const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
-if (!loggedInUser || loggedInUser.clientId === "admin") {
+// 입력란 및 버튼 요소 가져오기
+const titleInput = document.getElementById('question-title');
+const contentInput = document.getElementById('question-content');
+const submitButton = document.getElementById('submit-question');
 
-    addQuestion.disabled = true;
-    textarea.disabled = true;
-    button.disabled = true;
-    button.style.pointerEvents = "none";
+if (!loggedInUser || loggedInUser.clientId === "admin") {
+    titleInput.disabled = true;
+    contentInput.disabled = true;
+    submitButton.disabled = true;
+    alert("질문 작성 권한이 없습니다.");
 }
 
 // 질문 추가하기
 function addQuestion() {
-    const title = document.getElementById('question-title').value;
-    const content = document.getElementById('question-content').value;
+    const title = titleInput.value;
+    const content = contentInput.value;
     
     if (!title || !content) {
         alert('질문 제목과 내용을 입력하세요.');
@@ -23,8 +27,8 @@ function addQuestion() {
 
     axios.post(apiUrl, { title, content, answer: '', author: loggedInUser.clientNick })
         .then(() => {
-            document.getElementById('question-title').value = '';
-            document.getElementById('question-content').value = '';
+            titleInput.value = '';
+            contentInput.value = '';
             loadQuestions();
         });
 }

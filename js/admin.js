@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
         const storedUser = localStorage.getItem("loggedInUser");
         const loggedInUser = storedUser ? JSON.parse(storedUser) : null;
-        console.log(loggedInUser)
         
         if (loggedInUser) {
             dropdownBox.innerHTML = `
