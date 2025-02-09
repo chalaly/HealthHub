@@ -18,10 +18,18 @@
     },
     {
       "id": "58ac",
-      "clientName": "a",
-      "clientId": "a@naver.com",
-      "clientNick": "s",
-      "clientPwd": "a",
+      "clientName": "김강민",
+      "clientId": "rlarkdals@naver.com",
+      "clientNick": "Coldpuyyo",
+      "clientPwd": "rlarkdals",
+      "banned": false
+    },
+    {
+      "id": "530b",
+      "clientName": "신현철",
+      "clientId": "sihn777@naver.com",
+      "clientNick": "sin",
+      "clientPwd": "guscjf23",
       "banned": false
     }
   ],
@@ -127,6 +135,246 @@
       "clientId": "ckwnsgur0702@naver.com",
       "review": "그 유명한 천국의 계단",
       "rating": 5
+    },
+    {
+      "id": "67e2",
+      "pageId": "top_sub1",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "가슴 근육의 혁명! 빵빵한 가슴을 원하시면 헬스장에 도착하자마자 체스트프레스 머신으로 향하세요",
+      "rating": 4
+    },
+    {
+      "id": "f168",
+      "pageId": "top_sub2",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "팔뚝을 찢어버릴 준비됐나? 새로운 자극을 경험해볼 시간이다.",
+      "rating": 4
+    },
+    {
+      "id": "0c8b",
+      "pageId": "top_sub3",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "어깨 깡패로 거듭날 시간! 어깨 운동하면 뭐다? 오버헤드 프레스! 근데 바벨 들다가 목 나갈까 걱정된다면? 숄더 프레스 머신이 답이다!",
+      "rating": 4
+    },
+    {
+      "id": "1ef6",
+      "pageId": "top_sub4",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "\"등 운동은 풀업이지!\"라고 외치던 나… 하지만 레터럴 로우 머신을 써본 순간, 생각이 바뀌었다...",
+      "rating": 4
+    },
+    {
+      "id": "0bfe",
+      "pageId": "top_sub5",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "복근 운동하면 크런치, 레그 레이즈, 플랭크만 한다고? 😏 업도미널 머신(Abdominal Machine) 한 번 써보면 생각이 바뀔 걸?",
+      "rating": 5
+    },
+    {
+      "id": "b1c1",
+      "pageId": "bottom_sub1",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "대퇴사두(허벅지 앞쪽), 햄스트링, 둔근(엉덩이)까지 전부 폭격하는 머신! 이건 그냥 하체 지옥행 티켓이다.",
+      "rating": 5
+    },
+    {
+      "id": "e0aa",
+      "pageId": "bottom_sub2",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "\"하체는 스쿼트만 하면 되지 않나?\" 하던 당신 레그 익스텐션 머신 한 번 써보면 생각 바뀐다. 이건 그냥 허벅지 앞쪽(대퇴사두)만 죽어라 조지는 머신!",
+      "rating": 4
+    },
+    {
+      "id": "00f2",
+      "pageId": "bottom_sub3",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "하체를 터뜨려보자! 하지만 프리 웨이트만큼 코어 개입이 적음 → 진짜 강한 하체를 원하면 스쿼트랑 병행해야 함",
+      "rating": 3
+    },
+    {
+      "id": "3b01",
+      "pageId": "bottom_sub4",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "하체에 핵폭탄 떨어지는 느낌💣 하지만 무릎을 다 피면 유튜브에 무릎이 반대로 꺾여버린 영상에 자신이 올라갈 수 있으니 절대 조심!",
+      "rating": 4
+    },
+    {
+      "id": "dab8",
+      "pageId": "bottom_sub5",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "탄탄한 햄스트링과 둔근을 원하는 당신! 당장 시티드 레그컬을 하시길.",
+      "rating": 5
+    },
+    {
+      "id": "d8fe",
+      "pageId": "cardio_sub1",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "\"무동력\"이라는 이름 그대로, 모터 없이 오로지 내 발의 힘으로 벨트를 움직이는 트레드밀! 근데 왜 전동보다 비싸죠?",
+      "rating": 3
+    },
+    {
+      "id": "b366",
+      "pageId": "cardio_sub2",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "날씨 걱정 끝! : 비 오나 눈 오나 미세먼지 가득한 날에도 끄떡없이 유산소 운동 가능!",
+      "rating": 4
+    },
+    {
+      "id": "0d35",
+      "pageId": "cardio_sub3",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "헬창에겐 지방이 타는 쾌감을 주는 천국을 선사하지만 헬린이에겐 다른 느낌의 천국을 선사해주는 머신",
+      "rating": 3
+    },
+    {
+      "id": "1e6b",
+      "pageId": "cardio_sub4",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "탄탄한 허벅지와 엉덩이를 원하면서 칼로리도 태우고싶다? 그럼 스핀바이크!",
+      "rating": 4
+    },
+    {
+      "id": "441c",
+      "pageId": "cardio_sub5",
+      "nickname": "Coldpuyyo",
+      "clientId": "rlarkdals@naver.com",
+      "review": "해보면 이게 유산소 머신인지 무산소 머신인지 헷갈리실 겁니다.",
+      "rating": 4
+    },
+    {
+      "id": "13d6",
+      "pageId": "top_sub1",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "대흉근이 커지면 마음도 넓어집니다.",
+      "rating": 5
+    },
+    {
+      "id": "e7a3",
+      "pageId": "top_sub2",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "반팔 티셔츠의 완성은 꽉 찬 이두근 아니겠습니까.",
+      "rating": 4
+    },
+    {
+      "id": "22ce",
+      "pageId": "top_sub3",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "든든한 남자가 되기 위한 태평양 같은 어깨 숄더프레스 가즈아~",
+      "rating": 4
+    },
+    {
+      "id": "c426",
+      "pageId": "top_sub4",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "레터럴로우를 만나고 숨겨진 등 근육이 나오기 시작했습니다.",
+      "rating": 5
+    },
+    {
+      "id": "7eb5",
+      "pageId": "top_sub5",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "업도미널의 고통은 잠시이고 복부의 초콜릿은 영원할 것 입니다.",
+      "rating": 5
+    },
+    {
+      "id": "9dcf",
+      "pageId": "bottom_sub1",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "앉았다 일어나서 쉬지 말고 바로 앉으십쇼! 하체는 일어나지 못해야 한세트입니다.",
+      "rating": 3
+    },
+    {
+      "id": "ff71",
+      "pageId": "bottom_sub2",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "아.... 두 세트 했는데 내 앞벅지 어디 갔누....",
+      "rating": 4
+    },
+    {
+      "id": "b56e",
+      "pageId": "bottom_sub3",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "기능성 운동으로 추천 드립니다. 적당한 무게감 자극감 너무 좋고~",
+      "rating": 5
+    },
+    {
+      "id": "5a52",
+      "pageId": "bottom_sub4",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "200kg 이상 미십니까? 이제 한 다리씩 시작하시죠!",
+      "rating": 4
+    },
+    {
+      "id": "061c",
+      "pageId": "bottom_sub5",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "뒷다리가 튼튼해야 앞다리도 더 발전합니다.",
+      "rating": 4
+    },
+    {
+      "id": "8dba",
+      "pageId": "cardio_sub1",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "초반에 감 잡기 어려워서 포기했는데 사이트 보고 잘 하고 있습니다.",
+      "rating": 5
+    },
+    {
+      "id": "5007",
+      "pageId": "cardio_sub2",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "유산소 너무싫다....",
+      "rating": 1
+    },
+    {
+      "id": "51e1",
+      "pageId": "cardio_sub3",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "뛰면 근손실 나니까 계단탑니다~",
+      "rating": 3
+    },
+    {
+      "id": "1426",
+      "pageId": "cardio_sub4",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "체지방도 태우고 하체 근지구력도 늘고 일석이조.",
+      "rating": 5
+    },
+    {
+      "id": "9db9",
+      "pageId": "cardio_sub5",
+      "nickname": "sin",
+      "clientId": "sihn777@naver.com",
+      "review": "로잉머신 운동 후 저는 다리가 아니라 온몸이 아프더라구요ㅠㅠ",
+      "rating": 2
     }
   ],
   "machines": [
