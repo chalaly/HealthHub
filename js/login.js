@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
             
             localStorage.setItem("loggedInUser", JSON.stringify({
                 clientId: "admin",
-                clientName: "Administrator",
-                clientNick: "Admin"
+                clientName: "admin",
+                clientNick: "admin"
             }));
             
             window.location.href = './admin.html';

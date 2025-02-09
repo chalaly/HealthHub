@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     //  로컬 스토리지에서 로그인한 사용자 정보 가져오기
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    console.log(loggedInUser);
+    
 
     if (!loggedInUser) {
         alert("로그인이 필요합니다.");
@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         const reviews = reviewsResponse.data;
         machines = machinesResponse.data;
 
-        console.log(reviews);
-        console.log(machines);
+       
 
         //  로그인한 사용자 정보 찾기
         const user = users.find(user => user.clientId === loggedInUser.clientId);

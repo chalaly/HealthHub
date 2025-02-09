@@ -1,7 +1,7 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("footer.js 실행됨!"); // 디버깅용 로그
+   
 
     const footer = document.getElementById("footer-container");
     if (!footer) {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    console.log("푸터 요소 찾음! HTML에 추가합니다.");
+    
 
     // 푸터 콘텐츠 동적 삽입
     footer.innerHTML = `
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     `;
 
-    console.log("푸터 내용 삽입 완료!");
+    
 
     // 초기 푸터 위치 조정 후 표시
     adjustFooterPosition();
