@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function updateAnswer(id, answer) {
         try {
             await axios.patch(`http://localhost:3000/questions/${id}`, { answer });
-            renderQuestions(); // 업데이트 후 다시 불러오기
+            fetchQuestions(); // 업데이트 후 다시 불러오기
         } catch (error) {
             console.error("답변 저장 중 오류 발생:", error);
         }
