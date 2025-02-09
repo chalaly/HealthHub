@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const formData = new FormData(signupForm);
-        const clientData = Object.fromEntries(formData);
+        
 
         try {
             // 1️ 서버에서 기존 사용자 데이터 가져오기

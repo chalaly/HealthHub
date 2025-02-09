@@ -103,14 +103,14 @@ html {
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1000px){
 
  .animated-text {
      font-size: 30px;
      top: 50%;
  }
 
- /* ✅ 화살표 크기 축소 */
+ /*  화살표 크기 축소 */
  .wayleft,
  .wayright {
      width: 50px;
