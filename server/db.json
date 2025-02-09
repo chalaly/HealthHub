@@ -33,29 +33,7 @@
       "banned": false
     }
   ],
-  "questions": [
-    {
-      "id": "1a20",
-      "title": "zzzzz",
-      "content": "zzzzzzzzzzzzzzz",
-      "answer": "",
-      "author": "chalaly"
-    },
-    {
-      "id": "b267",
-      "title": "zzzzz",
-      "content": "zzzzzzzzzzzz",
-      "answer": "",
-      "author": "chalaly"
-    },
-    {
-      "id": "9192",
-      "title": "zzzzzzzzz",
-      "content": "zzzzzzzzzzzzzzz",
-      "answer": "",
-      "author": "chalaly"
-    }
-  ],
+  "questions": [],
   "reviews": [
     {
       "id": "9022",
@@ -79,14 +57,6 @@
       "nickname": "chalaly",
       "clientId": "ckwnsgur0702@naver.com",
       "review": "어깨의 기본이죠~",
-      "rating": 5
-    },
-    {
-      "id": "ab50",
-      "pageId": "top_sub4",
-      "nickname": "chalaly",
-      "clientId": "ckwnsgur0702@naver.com",
-      "review": "이거 자극 죽이지~",
       "rating": 5
     },
     {
@@ -360,6 +330,14 @@
       "clientId": "sihn777@naver.com",
       "review": "로잉머신 운동 후 저는 다리가 아니라 온몸이 아프더라구요ㅠㅠ",
       "rating": 2
+    },
+    {
+      "id": "e9cd",
+      "pageId": "top_sub4",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "이게 진짜 지리기 하던디",
+      "rating": 5
     }
   ],
   "machines": [
