@@ -15,12 +15,41 @@
       "clientNick": "chalaly",
       "clientPwd": "ckwnsgur",
       "banned": false
+    },
+    {
+      "id": "58ac",
+      "clientName": "a",
+      "clientId": "a@naver.com",
+      "clientNick": "s",
+      "clientPwd": "a",
+      "banned": false
     }
   ],
   "questions": [
     {
       "id": "1a20",
       "title": "zzzzz",
+      "content": "zzzzzzzzzzzzzzz",
+      "answer": "",
+      "author": "chalaly"
+    },
+    {
+      "id": "b267",
+      "title": "zzzzz",
+      "content": "zzzzzzzzzzzz",
+      "answer": "",
+      "author": "chalaly"
+    },
+    {
+      "id": "c945",
+      "title": "zzzzzzzz",
+      "content": "zzzzzzzzzzzzzz",
+      "answer": "",
+      "author": "chalaly"
+    },
+    {
+      "id": "9192",
+      "title": "zzzzzzzzz",
       "content": "zzzzzzzzzzzzzzz",
       "answer": "",
       "author": "chalaly"
@@ -52,14 +81,6 @@
       "rating": 5
     },
     {
-      "id": "b9a7",
-      "pageId": "top_sub5",
-      "nickname": "chalaly",
-      "clientId": "ckwnsgur0702@naver.com",
-      "review": "딱봐도 어려워보이네",
-      "rating": 5
-    },
-    {
       "id": "ab50",
       "pageId": "top_sub4",
       "nickname": "chalaly",
@@ -68,96 +89,150 @@
       "rating": 5
     },
     {
-      "id": "9668",
-      "pageId": "top_sub1",
-      "nickname": "chalaly",
-      "clientId": "ckwnsgur0702@naver.com",
-      "review": "기본 맞죠?",
-      "rating": 4
-    },
-    {
       "id": "3f68",
       "pageId": "top_sub1",
       "nickname": "chalaly",
       "clientId": "ckwnsgur0702@naver.com",
       "review": "이거보다 숄더 프레스가 더 좋던데;;",
       "rating": 2
+    },
+    {
+      "id": "c7a7",
+      "pageId": "bottom_sub1",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "핵스쿼트 ㄷㄷㄷ",
+      "rating": 4
+    },
+    {
+      "id": "76e7",
+      "pageId": "cardio_sub1",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "김동현이 타는거 봤는데 엄청 어려워보이던데",
+      "rating": 5
+    },
+    {
+      "id": "4d01",
+      "pageId": "top_sub5",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "한번 해보고 싶다",
+      "rating": 4
+    },
+    {
+      "id": "ec5e",
+      "pageId": "cardio_sub3",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "그 유명한 천국의 계단",
+      "rating": 5
     }
   ],
   "machines": [
     {
       "pageId": "top_sub1",
       "machineName": "체스트프레스",
+      "image": "../img/nautiluschest.png",
+      "message": "가슴 근육을 타겟 하는 머신으로 대흉근 발달에 유용합니다.",
       "id": "990b"
     },
     {
       "pageId": "top_sub2",
       "machineName": "암컬머신",
+      "image": "../img/primearm.png",
+      "message": "팔 근육을 타겟하는 머신으로 이두근 발달에 유용합니다.",
       "id": "014f"
     },
     {
       "pageId": "top_sub3",
       "machineName": "숄더프레스",
+      "image": "../img/cybexshoulder.png",
+      "message": "삼각근(어깨 근육)을 주요 타겟으로 하는 머신입니다.",
       "id": "d8ae"
     },
     {
       "pageId": "top_sub4",
       "machineName": "레터럴로우",
+      "image": "../img/hammerback.png",
+      "message": "광배근과 승모근을 주 타겟으로 하는 기구입니다.",
       "id": "f6dd"
     },
     {
       "pageId": "top_sub5",
       "machineName": "업도미널",
+      "image": "../img/lifeupdominal.png",
+      "message": "복직근에 강한 자극을 줄 수 있습니다.",
       "id": "2be8"
     },
     {
       "pageId": "bottom_sub1",
       "machineName": "핵스쿼트",
+      "image": "../img/cybexsquat.png",
+      "message": "하체에 고립과 부하가 집중되도록 설계된 머신입니다.",
       "id": "6cc6"
     },
     {
       "pageId": "bottom_sub2",
       "machineName": "레그익스텐션",
+      "image": "../img/sincoleg.png",
+      "message": "대퇴사두근(허벅지앞쪽)을 집중적으로 강화하는 기구입니다.",
       "id": "ab3c"
     },
     {
       "pageId": "bottom_sub3",
       "machineName": "시티드레그프레스",
+      "image": "../img/newtechleg.png",
+      "message": "발 포지션에 따라 하체 부위의 발달을 다르게 가져갈 수 있는 기구",
       "id": "d8c3"
     },
     {
       "pageId": "bottom_sub4",
       "machineName": "파워레그프레스",
+      "image": "../img/hammerleg.png",
+      "message": "하체 주요 근육그룹을 전체적으로 발달시킵니다.",
       "id": "3fd1"
     },
     {
       "pageId": "bottom_sub5",
       "machineName": "시티드레그컬",
+      "image": "../img/matrixleg.png",
+      "message": "허벅지 뒤쪽(햄스트링)을 강화시켜 줍니다.",
       "id": "c704"
     },
     {
       "pageId": "cardio_sub1",
       "machineName": "무동력트레드밀",
+      "image": "../img/draxtreadmill.png",
+      "message": "사용자의 움직임에 맞춰 구동되는 전력이 없는 기구입니다.",
       "id": "61f9"
     },
     {
       "pageId": "cardio_sub2",
       "machineName": "런닝머신",
+      "image": "../img/draxruning.png",
+      "message": "실내에서 달리기를 할 수 있는 기구입니다.",
       "id": "2299"
     },
     {
       "pageId": "cardio_sub3",
       "machineName": "클라임밀",
+      "image": "../img/matrixclimb.png",
+      "message": "스텝밀이라고도 불리며 계단을 오르는 형태의 운동을 합니다.",
       "id": "030f"
     },
     {
       "pageId": "cardio_sub4",
       "machineName": "스핀바이크",
+      "image": "../img/vortecbike.png",
+      "message": "여러 자세로 전신을 활용할 수 있는 사이클입니다.",
       "id": "2af9"
     },
     {
       "pageId": "cardio_sub5",
       "machineName": "로잉머신",
+      "image": "../img/concept2rowing.png",
+      "message": "노젓기를 구현하는 기구로 조정선수들이 실내훈련 시 사용합니다.",
       "id": "d607"
     }
   ]

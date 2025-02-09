@@ -55,7 +55,8 @@ function getStarRating(score) {
 
 // 평균 평점 계산 함수
 function calculateAverageRating() {
-    const total = ratings.reduce((sum, rating) => sum + rating, 0);
+    if (ratings.length === 0) return "0.0";
+    const total = ratings.reduce((sum, item) => sum + item.rating, 0);
     return (total / ratings.length).toFixed(1); // 소수점 첫째 자리까지 표시
 }
 
@@ -114,6 +115,8 @@ function loadExistingReviews() {
     return existingReviews;
 }
 
+const staticReviews = loadExistingReviews();
+
 // ** 서버에서 기존 리뷰 불러오기 (초기화 시)**
 async function loadReviews() {
     try {
@@ -131,8 +134,6 @@ async function loadReviews() {
             console.log(`${pageId} 페이지에 대한 리뷰 데이터:`, filteredReviews);
         }
 
-        const staticReviews = loadExistingReviews();
-
 
         // ** 기존 리뷰 목록을 클리어하여 중복 방지 **
         reviewsList.innerHTML = '';
@@ -140,13 +141,17 @@ async function loadReviews() {
         //html 리뷰 먼저 추가
         staticReviews.forEach(addReviewToList);
 
+        ratings = filteredReviews.map(review => ({ id: String(review.id), rating: review.rating }));
+
+
+
         filteredReviews.forEach(review => {
 
             // 리뷰 요소 추가 함수 호출
             addReviewToList(review);
 
-            // 기존 평점 데이터 추가
-            ratings.push(review.rating);
+            // // 기존 평점 데이터 추가
+            // ratings.push(review.rating);
         });
 
         // 평균 평점 업데이트
@@ -159,9 +164,12 @@ async function loadReviews() {
 //리뷰 목록에 추가하는 함수 (로그인 여부와 무관하게 리뷰를 표시)
 function addReviewToList(review) {
 
+
     //  리뷰 컨테이너 (`div.review-item`)
     const reviewElement = document.createElement('div');
     reviewElement.classList.add('review-item');
+
+    reviewElement.dataset.id = String(review.id);  // <-- 문자열로 변환!
 
 
     if (review.isStatic) {
@@ -191,9 +199,19 @@ function addReviewToList(review) {
 
         //  삭제 버튼 클릭 시 확인 팝업 띄우기
         deleteButton.addEventListener("click", () => {
+
+            console.log("삭제 버튼 클릭! review 객체:", review); // 전체 객체 확인
+            console.log("삭제 요청할 review ID:", review.id); // review.id 값 확인
+
+            if (!review.id) {
+                alert("삭제할 리뷰 ID가 존재하지 않습니다!");
+                return;
+            }
+
+
             const confirmDelete = confirm("정말 이 리뷰를 삭제하시겠습니까?");
             if (confirmDelete) {
-                deleteReview(review.id);
+                deleteReview(String(review.id));  //삭제 함수 실행
             }
         });
 
@@ -247,10 +265,12 @@ reviewForm.addEventListener('submit', async function (e) {
         console.log(response)
 
         if (response.status === 201) {
+
+            const createdReview = response.data;
             // 리뷰 목록에 추rk
-            addReviewToList(newReview);
+            addReviewToList(createdReview);
             // 평점 데이터에 추가
-            ratings.push(ratingValue);
+            ratings.push({ id: String(createdReview.id), rating: Number(createdReview.rating) });
 
             // 평균 평점 업데이트
             updateAverageRating();
@@ -267,15 +287,36 @@ reviewForm.addEventListener('submit', async function (e) {
     }
 });
 
+
+
 async function deleteReview(reviewId) {
     try {
         //  서버에 삭제 요청 보내기
-        await axios.delete(`http://localhost:3000/reviews/${reviewId}`);
 
-        //  삭제된 리뷰를 화면에서도 제거
-        loadReviews(); // 서버에서 최신 리뷰 목록 다시 불러오기
+        const reviewIdStr = String(reviewId);
 
-        alert("리뷰가 삭제되었습니다.");
+        const response = await axios.delete(`http://localhost:3000/reviews/${String(reviewId)}`);
+
+        if (response.status === 200 || response.status === 204) {
+
+
+            //  `loadReviews()`를 호출하는 대신, 해당 리뷰만 제거
+            const reviewElement = document.querySelector(`.review-item[data-id="${reviewIdStr}"]`);
+            if (reviewElement) {
+                reviewElement.remove(); // 해당 리뷰 삭제
+            }
+
+            // 평균 평점 업데이트
+            ratings = ratings.filter(r => r.id !== reviewIdStr);
+
+
+            updateAverageRating();
+
+            alert("리뷰가 삭제되었습니다.");
+        } else {
+            alert("리뷰 삭제에 실패했습니다. 다시 시도해주세요.");
+        }
+
     } catch (error) {
         console.error("리뷰 삭제 중 오류 발생:", error);
         alert("리뷰 삭제에 실패했습니다. 다시 시도해주세요.");

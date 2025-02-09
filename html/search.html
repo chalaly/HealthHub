@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운동기구 검색</title>
+
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/scroll.css">
+    <script defer src="../js/search.js"></script>
+    <script defer src="../js/header.js"></script>
+    <script defer src="../js/footer.js"></script>
+    <script defer src="../js/scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="header_logo"><!--로고 클래스-->
+            <a href="../index.html">
+                <img src="../img/logo.png"> <!--로고 이미지-->
+            </a>
+        </div>
+    
+        <div class="dropdown_container">
+            <img src="../img/icon.png" class="icon_category">
+            <div class="dropdown_box">
+                <a href="./html/mypage.html" class="dropdown_link">마이페이지</a>
+                <a href="./html/login.html" class="dropdown_link">로그인</a>
+    
+            </div>
+        </div>
+    </header>
+
+    
+
+    <main>
+        <h1 style="text-align: center;">운동기구 검색</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="운동기구 검색">
+            <button id="search-button">검색</button>
+            <button id="cancel-button" style="display: none;">취소</button>
+        </div>
+    
+        <!--  검색 결과 (운동기구 목록) -->
+        <div id="machine-list" class="card-container"></div>
+    </main>
+    
+    <button id="scrollToTop">
+        <img src="../img/scroll.png" alt="위로 가기" class="up-arrow">
+    </button>
+    
+
+
+    <footer id="footer-container">
+    
+    </footer>
+
+</body>
+
+</html>

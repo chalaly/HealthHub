@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>마이페이지</title>
+
     <link rel="stylesheet" href="../css/mypage.css">
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">  
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/font.css">
     <link rel="stylesheet" href="../css/scroll.css">
     <script defer src="../js/scroll.js"></script>
@@ -26,17 +26,17 @@
                 <img src="../img/logo.png"> <!--로고 이미지-->
             </a>
         </div>
-    
+
         <div class="dropdown_container">
             <img src="../img/icon.png" class="icon_category">
             <div class="dropdown_box">
                 <a href="../html/mypage.html" class="dropdown_link">마이페이지</a>
                 <a href="../html/login.html" class="dropdown_link">로그인</a>
-    
+
             </div>
         </div>
     </header>
-    
+
 
     <div class="container">
         <!-- 프로필 정보 -->
@@ -46,26 +46,29 @@
             <p><strong>닉네임:</strong> <span id="nick-name"></span></p>
             <p><strong>이름:</strong> <span id="user-name"></span></p>
             <button id="edit-profile-btn">비밀 번호 수정</button> <!--  회원정보 수정 버튼 추가 -->
-            <button id ="edit-nick-btn">닉네임 변경</button>
+            <button id="edit-nick-btn">닉네임 변경</button>
         </div>
 
         <!-- 활동 내역 -->
         <div class="activity-section">
             <h3>활동 내역</h3>
             <div id="activity-list"></div>
+            <div id="pagination" class="pagination-container"></div>
         </div>
     </div>
+
+
 
     <button id="scrollToTop">
         <img src="../img/scroll.png" alt="위로 가기" class="up-arrow">
     </button>
 
     <footer id="footer-container">
-    
+
     </footer>
 
-   
-   
+
+
 
 
 </body>
