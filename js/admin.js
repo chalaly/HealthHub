@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("totalReviews").textContent = reviews.length;
     }
 
+    // 서버에서 Q&A 데이터를 비동기적으로 가져오는 함수
     async function fetchQuestions() {
         try {
             const response = await axios.get('http://localhost:3000/questions');
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // 서버에서 머신 데이터를 비동기적으로 가져오는 함수
     async function fetchMachines() {
         try {
             const response = await axios.get('http://localhost:3000/machines');
