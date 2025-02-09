@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function deleteQuestion(id) {
         try {
             await axios.delete(`http://localhost:3000/questions/${id}`);
-            fetchQuestions(); // 삭제 후 다시 불러오기
+            await fetchQuestions(); // 삭제 후 다시 불러오기
         } catch (error) {
             console.error("질문 삭제 중 오류 발생:", error);
         }
