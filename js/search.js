@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         machines = machinesResponse.data;
         reviews = reviewsResponse.data;
 
-        console.log(" 운동기구 데이터:", machines);
-        console.log(" 리뷰 데이터:", reviews);
+ 
 
         displayMachines(machines); //  초기 화면에 모든 운동기구 표시
     } catch (error) {

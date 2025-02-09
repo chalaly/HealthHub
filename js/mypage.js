@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             //  사용자가 작성한 리뷰만 필터링
             const userReviews = reviews.filter(review => review.clientId === user.clientId);
-            console.log(" 사용자 리뷰 데이터:", userReviews);
+           
 
             if (userReviews.length > 0) {
                 displayReviews(userReviews, currentPage); //  페이지네이션 적용하여 리뷰 표시

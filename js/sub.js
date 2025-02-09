@@ -64,20 +64,6 @@ function calculateAverageRating() {
 function updateAverageRating() {
     const average = calculateAverageRating(); // 평균 평점 계산
 
-    // // 오류검사
-    // if (average === undefined || isNaN(average)) {
-    //     console.warn("평균 평점 데이터가 없습니다.");
-    //     return; // 데이터가 없으면 함수 실행 중단
-    // }
-
-    // const starRatingElement = document.getElementById("star-average-rating");
-
-    // if (!starRatingElement) {
-    //     console.error("오류: 'star-average-rating' 요소를 찾을 수 없습니다!");
-    //     return; // 요소가 없으면 함수 실행 중단
-    // }
-
-
     averageRatingValue.textContent = average; // 숫자 표시
     document.getElementById("star-average-rating").innerHTML = getStarRating(average); // 별 UI 표시
 }
@@ -120,20 +106,12 @@ const staticReviews = loadExistingReviews();
 // ** 서버에서 기존 리뷰 불러오기 (초기화 시)**
 async function loadReviews() {
     try {
-        console.log(" 서버에서 리뷰 데이터 요청 중...");
         const response = await axios.get('http://localhost:3000/reviews');
         const reviews = response.data;
 
         // 현재 페이지(`pageId`)에 해당하는 리뷰만 필터링
 
         const filteredReviews = reviews.filter(review => review.pageId === pageId);
-
-        if (!filteredReviews.length) {
-            console.log(`⚠ ${pageId} 페이지에 대한 리뷰가 없습니다.`);
-        } else {
-            console.log(`${pageId} 페이지에 대한 리뷰 데이터:`, filteredReviews);
-        }
-
 
         // ** 기존 리뷰 목록을 클리어하여 중복 방지 **
         reviewsList.innerHTML = '';
@@ -150,8 +128,7 @@ async function loadReviews() {
             // 리뷰 요소 추가 함수 호출
             addReviewToList(review);
 
-            // // 기존 평점 데이터 추가
-            // ratings.push(review.rating);
+           
         });
 
         // 평균 평점 업데이트
@@ -179,7 +156,6 @@ function addReviewToList(review) {
 
         // 리뷰 내용 (`div.review-content`)
         const reviewContent = document.createElement('p');
-        console.log(reviewContent);
         reviewContent.classList.add('review-content');
         reviewElement.innerHTML = `<p><strong>${review.nickname}:</strong> &nbsp <span class = "review-text"> ${review.review}<span> (평점: ${review.rating}점)</p>`;
 
@@ -200,9 +176,6 @@ function addReviewToList(review) {
         //  삭제 버튼 클릭 시 확인 팝업 띄우기
         deleteButton.addEventListener("click", () => {
 
-            console.log("삭제 버튼 클릭! review 객체:", review); // 전체 객체 확인
-            console.log("삭제 요청할 review ID:", review.id); // review.id 값 확인
-
             if (!review.id) {
                 alert("삭제할 리뷰 ID가 존재하지 않습니다!");
                 return;
@@ -222,7 +195,7 @@ function addReviewToList(review) {
 }
 
 
-console.log(" loadReviews() 실행 준비 완료!");
+
 
 
 // 페이지 로드 시 서버에서 기존 리뷰 불러오기
@@ -267,7 +240,7 @@ reviewForm.addEventListener('submit', async function (e) {
         if (response.status === 201) {
 
             const createdReview = response.data;
-            // 리뷰 목록에 추rk
+            // 리뷰 목록에 추가
             addReviewToList(createdReview);
             // 평점 데이터에 추가
             ratings.push({ id: String(createdReview.id), rating: Number(createdReview.rating) });
