@@ -89,14 +89,6 @@
       "rating": 5
     },
     {
-      "id": "3f68",
-      "pageId": "top_sub1",
-      "nickname": "chalaly",
-      "clientId": "ckwnsgur0702@naver.com",
-      "review": "이거보다 숄더 프레스가 더 좋던데;;",
-      "rating": 2
-    },
-    {
       "id": "c7a7",
       "pageId": "bottom_sub1",
       "nickname": "chalaly",
@@ -126,6 +118,62 @@
       "nickname": "chalaly",
       "clientId": "ckwnsgur0702@naver.com",
       "review": "그 유명한 천국의 계단",
+      "rating": 5
+    },
+    {
+      "id": "cf15",
+      "pageId": "bottom_sub2",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "이거 잘못해서 무릎 나간듯 ㅠㅠ",
+      "rating": 3
+    },
+    {
+      "id": "9fc5",
+      "pageId": "bottom_sub3",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "진짜 처음보는 기구입니당",
+      "rating": 2
+    },
+    {
+      "id": "956f",
+      "pageId": "bottom_sub4",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "이거 사람들 올라간거 본적 있는데 ㅋㅋㅋ",
+      "rating": 4
+    },
+    {
+      "id": "f8cc",
+      "pageId": "bottom_sub5",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "이거랑 레그익스텐션이랑 똑같은 줄",
+      "rating": 3
+    },
+    {
+      "id": "3e33",
+      "pageId": "cardio_sub2",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "런닝머신에서 달리는건 가라아님 ? ㅋㅋㅋ",
+      "rating": 2
+    },
+    {
+      "id": "834c",
+      "pageId": "cardio_sub4",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "입문하는 사람한테 최고 아닌교",
+      "rating": 5
+    },
+    {
+      "id": "31db",
+      "pageId": "cardio_sub5",
+      "nickname": "chalaly",
+      "clientId": "ckwnsgur0702@naver.com",
+      "review": "이거 지리지",
       "rating": 5
     }
   ],
