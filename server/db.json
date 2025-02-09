@@ -32,6 +32,27 @@
       "content": "zzzzzzzzzzzzzzz",
       "answer": "",
       "author": "chalaly"
+    },
+    {
+      "id": "b267",
+      "title": "zzzzz",
+      "content": "zzzzzzzzzzzz",
+      "answer": "",
+      "author": "chalaly"
+    },
+    {
+      "id": "c945",
+      "title": "zzzzzzzz",
+      "content": "zzzzzzzzzzzzzz",
+      "answer": "",
+      "author": "chalaly"
+    },
+    {
+      "id": "9192",
+      "title": "zzzzzzzzz",
+      "content": "zzzzzzzzzzzzzzz",
+      "answer": "",
+      "author": "chalaly"
     }
   ],
   "reviews": [
@@ -105,14 +126,6 @@
       "nickname": "chalaly",
       "clientId": "ckwnsgur0702@naver.com",
       "review": "그 유명한 천국의 계단",
-      "rating": 5
-    },
-    {
-      "id": "c8e9",
-      "pageId": "top_sub1",
-      "nickname": "chalaly",
-      "clientId": "ckwnsgur0702@naver.com",
-      "review": "테스트1",
       "rating": 5
     }
   ],
