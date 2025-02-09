@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     //  로그인한 사용자 정보 가져오기
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    console.log(loggedInUser);
+    
 
     if (!loggedInUser) {
         alert("로그인이 필요합니다.");
@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             //  로그인한 사용자 정보 찾기
             const userData = users.find(user => user.clientId === loggedInUser.clientId);
-            console.log(userData.clientPwd);
-
+            
             if (!userData) {
                 alert("사용자 정보를 찾을 수 없습니다.");
                 return;
@@ -73,7 +72,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
             //  localStorage에서도 비밀번호 변경
             loggedInUser.password = newPassword;
-            console.log(loggedInUser.password);
             localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
 
             alert("비밀번호가 변경되었습니다.");

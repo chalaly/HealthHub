@@ -235,7 +235,7 @@ reviewForm.addEventListener('submit', async function (e) {
     try {
         // ** Axios를 사용하여 서버에 데이터 전송**
         const response = await axios.post("http://localhost:3000/reviews", newReview);
-        console.log(response)
+        
 
         if (response.status === 201) {
 

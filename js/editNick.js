@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     //  로그인한 사용자 정보 가져오기
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-    console.log(loggedInUser);
+    
 
     if (!loggedInUser) {
         alert("로그인이 필요합니다.");
