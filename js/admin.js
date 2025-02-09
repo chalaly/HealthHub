@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function updateAnswer(id, answer) {
         try {
             await axios.patch(`http://localhost:3000/questions/${id}`, { answer });
-            fetchQuestions(); // 업데이트 후 다시 불러오기
+            renderQuestions(); // 업데이트 후 다시 불러오기
         } catch (error) {
             console.error("답변 저장 중 오류 발생:", error);
         }
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
     async function deleteQuestion(id) {
         try {
             await axios.delete(`http://localhost:3000/questions/${id}`);
-            await fetchQuestions(); // 삭제 후 다시 불러오기
+            renderQuestions(); // 삭제 후 다시 불러오기
         } catch (error) {
             console.error("질문 삭제 중 오류 발생:", error);
         }
